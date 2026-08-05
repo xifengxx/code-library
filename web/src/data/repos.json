@@ -32,6 +32,36 @@
       "file": "repos/ai-llm/langchain.md"
     },
     {
+      "name": "img2threejs",
+      "repo_url": "https://github.com/img2threejs/img2threejs",
+      "article_url": [
+        "https://mp.weixin.qq.com/s/kE3Ev7uXP-_Lsw6GpvhJFQ"
+      ],
+      "category": "frontend",
+      "tags": [
+        "threejs",
+        "webgl",
+        "image-to-3d",
+        "procedural-generation",
+        "claude-code",
+        "ai-agents"
+      ],
+      "language": "Python",
+      "stars": 9757,
+      "status": "收藏",
+      "date_added": "2026-08-05",
+      "sections": {
+        "__lead__": "",
+        "一句话": "给一张参考图（耳机/机械/建筑/道具），自动重建为可动画、可改代码的纯代码 Three.js 模型。",
+        "作用与亮点": "- 明确选择**纯代码重建**路线：用基础几何体 + 程序化着色器 + 生成式几何搭出物体，而非神经渲染\n- 先评估图片是否适合重建，再判断物体类型、复杂度与质量目标\n- 生成前先整理 `detailInventory`，把倒角/螺丝/刻线/光泽/污渍等决定辨识度的细节安排到真实组件或材质\n- **质量门控**：分阶段制作（结构→形体→材质→表面细节→灯光→交互→优化），每轮渲染截图与原图对照做视觉检查，不过关就回改，通过才解锁下一轮\n- 代码模型可继续调色、移动零件、加动画，适合产品展示、浏览器小游戏、交互式官网",
+        "主要内容": "- Agent Skill：Claude Code / Codex / OpenCode 通用（`npx skills add img2threejs/img2threejs`，Claude Code 可直接 clone 进 `~/.claude/skills/`）\n- 官方 topics：threejs / webgl / procedural-generation / image-to-3d / ai-agents / computer-graphics / typescript\n- Token 高效：流程化拆解，避免智能体\"看一眼就乱写\"",
+        "对我的价值": "需要 3D 展示资产（产品/游戏/官网）时直接用；学习\"AI 智能体 + 程序化建模\"的工程化流水线（拆解→清单→分阶段→视觉自检）。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n给一张参考图（耳机/机械/建筑/道具），自动重建为可动画、可改代码的纯代码 Three.js 模型。\n\n## 作用与亮点\n- 明确选择**纯代码重建**路线：用基础几何体 + 程序化着色器 + 生成式几何搭出物体，而非神经渲染\n- 先评估图片是否适合重建，再判断物体类型、复杂度与质量目标\n- 生成前先整理 `detailInventory`，把倒角/螺丝/刻线/光泽/污渍等决定辨识度的细节安排到真实组件或材质\n- **质量门控**：分阶段制作（结构→形体→材质→表面细节→灯光→交互→优化），每轮渲染截图与原图对照做视觉检查，不过关就回改，通过才解锁下一轮\n- 代码模型可继续调色、移动零件、加动画，适合产品展示、浏览器小游戏、交互式官网\n\n## 主要内容\n- Agent Skill：Claude Code / Codex / OpenCode 通用（`npx skills add img2threejs/img2threejs`，Claude Code 可直接 clone 进 `~/.claude/skills/`）\n- 官方 topics：threejs / webgl / procedural-generation / image-to-3d / ai-agents / computer-graphics / typescript\n- Token 高效：流程化拆解，避免智能体\"看一眼就乱写\"\n\n## 对我的价值\n需要 3D 展示资产（产品/游戏/官网）时直接用；学习\"AI 智能体 + 程序化建模\"的工程化流水线（拆解→清单→分阶段→视觉自检）。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/frontend/img2threejs.md"
+    },
+    {
       "name": "react-admin",
       "repo_url": "https://github.com/marmelab/react-admin",
       "article_url": [
@@ -60,6 +90,35 @@
       },
       "body": "## 一句话\n用几行声明式代码生成企业级后台管理界面的 React 框架（B2B 应用 UI 方案）。\n\n## 作用与亮点\n- 声明式 `<Resource>` 定义，自动生成列表 / 创建 / 编辑 / 详情全套 CRUD\n- 内置列表筛选、排序、分页、批量操作、表单校验、主题定制\n- **Data Provider** 数据层抽象：REST / GraphQL / 自定义后端都能接\n- 插件生态丰富：导出、导入、富文本、地图、图表等\n\n## 主要内容\n- `<Admin>` / `<Resource>` 声明式架构\n- Data Provider 数据层（把任意后端接口适配进来）\n- 200+ 组件：Table / Form / Autocomplete / Reference 等\n- `examples/` 目录提供可直接运行的完整示例（CRM / E-commerce / Blog）\n\n## 对我的价值\n凡涉及后台 / 管理面板的项目可直接参照；其 data provider 分层思想可以借鉴到自研后台；示例项目可本地跑起来手动实践，学习大型 React 项目结构。\n\n## 实践心得（待实践）\n>",
       "file": "repos/frontend/react-admin.md"
+    },
+    {
+      "name": "scroll-world",
+      "repo_url": "https://github.com/oso95/scroll-world",
+      "article_url": [
+        "https://mp.weixin.qq.com/s/kE3Ev7uXP-_Lsw6GpvhJFQ"
+      ],
+      "category": "frontend",
+      "tags": [
+        "web-animation",
+        "landing-page",
+        "agent-skill",
+        "cinematic",
+        "3d"
+      ],
+      "language": "JavaScript",
+      "stars": 7500,
+      "status": "收藏",
+      "date_added": "2026-08-05",
+      "sections": {
+        "__lead__": "",
+        "一句话": "一个 Agent Skill，把任意品牌资料变成「滚动飞越式」的 3D 电影感落地页——滚轮像镜头一样穿越场景。",
+        "作用与亮点": "- 把\"视觉设计 + 视频生成 + 镜头衔接 + 网页动效\"整套流程封装成可调用的 Skill\n- 喂入品牌资料、产品信息、视觉风格后，自动规划场景、生成图片和镜头视频，并接进网页滚动播放引擎\n- 滚动即镜头飞行，章节文案/卖点随场景出现，回滚镜头倒退，体验像一支可控制的品牌短片\n- 适用：产品发布页、品牌官网、旅行项目、地产展示、个人作品集",
+        "主要内容": "- 完整的 Skill 本体 + 提示词模板 + 批处理脚本 + 网页滚动播放引擎\n- 图片/视频需按项目单独生成（仓库不附带素材）\n- 视频链路：Monid CLI 调 Seedance 2.0；Higgsfield CLI 生成场景图；ffmpeg/ffprobe 做帧提取编码；竖屏画布需 Python3 + Pillow\n- 安装：Claude Code 插件市场 `oso95/scroll-world`，或 `npx skills add oso95/scroll-world`",
+        "对我的价值": "做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究\"AI 驱动的前端动画生产流水线\"的上游参照。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n一个 Agent Skill，把任意品牌资料变成「滚动飞越式」的 3D 电影感落地页——滚轮像镜头一样穿越场景。\n\n## 作用与亮点\n- 把\"视觉设计 + 视频生成 + 镜头衔接 + 网页动效\"整套流程封装成可调用的 Skill\n- 喂入品牌资料、产品信息、视觉风格后，自动规划场景、生成图片和镜头视频，并接进网页滚动播放引擎\n- 滚动即镜头飞行，章节文案/卖点随场景出现，回滚镜头倒退，体验像一支可控制的品牌短片\n- 适用：产品发布页、品牌官网、旅行项目、地产展示、个人作品集\n\n## 主要内容\n- 完整的 Skill 本体 + 提示词模板 + 批处理脚本 + 网页滚动播放引擎\n- 图片/视频需按项目单独生成（仓库不附带素材）\n- 视频链路：Monid CLI 调 Seedance 2.0；Higgsfield CLI 生成场景图；ffmpeg/ffprobe 做帧提取编码；竖屏画布需 Python3 + Pillow\n- 安装：Claude Code 插件市场 `oso95/scroll-world`，或 `npx skills add oso95/scroll-world`\n\n## 对我的价值\n做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究\"AI 驱动的前端动画生产流水线\"的上游参照。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/frontend/scroll-world.md"
     },
     {
       "name": "free-programming-books",
