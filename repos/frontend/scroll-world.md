@@ -11,22 +11,27 @@ date_added: "2026-08-05"
 ---
 
 ## 一句话
-一个 Agent Skill，把任意品牌资料变成「滚动飞越式」的 3D 电影感落地页——滚轮像镜头一样穿越场景。
+一个 Agent Skill，把任意品牌资料变成**「滚动飞越式」3D 电影感落地页**——滚轮像镜头一样穿越场景，章节文案随场景出现。
 
-## 作用与亮点
-- 把"视觉设计 + 视频生成 + 镜头衔接 + 网页动效"整套流程封装成可调用的 Skill
-- 喂入品牌资料、产品信息、视觉风格后，自动规划场景、生成图片和镜头视频，并接进网页滚动播放引擎
-- 滚动即镜头飞行，章节文案/卖点随场景出现，回滚镜头倒退，体验像一支可控制的品牌短片
-- 适用：产品发布页、品牌官网、旅行项目、地产展示、个人作品集
+## 内容与亮点
+- **核心能力**：喂入品牌资料/产品信息/视觉风格 → 自动规划场景、生成图片和镜头视频，接进网页**滚动播放引擎**
+- **交互效果**：滚动即镜头飞行、回滚即倒退，体验像一支可用鼠标控制进度的品牌短片
+- **适用**：产品发布页、品牌官网、旅行项目、地产展示、个人作品集
+- **素材说明**：图片/视频需按每个项目单独生成，仓库不附带素材
 
-## 主要内容
-- 完整的 Skill 本体 + 提示词模板 + 批处理脚本 + 网页滚动播放引擎
-- 图片/视频需按项目单独生成（仓库不附带素材）
-- 视频链路：Monid CLI 调 Seedance 2.0；Higgsfield CLI 生成场景图；ffmpeg/ffprobe 做帧提取编码；竖屏画布需 Python3 + Pillow
-- 安装：Claude Code 插件市场 `oso95/scroll-world`，或 `npx skills add oso95/scroll-world`
+## 如何使用
+```bash
+# Claude Code 插件市场安装
+/plugin marketplace add oso95/scroll-world
+/plugin install scroll-world@scroll-world
+# Codex 等 Agent Skills 工具
+npx skills add oso95/scroll-world
+```
+- 依赖：`Monid CLI`（视频，调 Seedance 2.0）、`Higgsfield CLI`（场景图）、`ffmpeg`/`ffprobe`（帧提取编码）、竖屏画布需 Python3 + Pillow
+- 调用：输入 `/scroll-world` 或描述想要的滚动品牌世界
 
 ## 对我的价值
-做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究"AI 驱动的前端动画生产流水线"的上游参照。
+做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究「AI 驱动前端动画生产流水线」的上游参照。
 
 ## 实践心得（待实践）
 >

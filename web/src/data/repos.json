@@ -22,13 +22,13 @@
       "date_added": "2026-08-05",
       "sections": {
         "__lead__": "",
-        "一句话": "构建 LLM 应用（Agent / RAG / 链式编排）最流行的 Python 框架。",
-        "作用与亮点": "- 把模型调用、提示词、工具调用、记忆、检索统一成**可组合的组件**\n- 内置大量第三方集成：各家模型供应商、向量数据库、工具库\n- 生态最全、教程最多、社区最大，遇到问题基本都能搜到现成答案\n- 既适合快速原型，也支撑生产级应用（配合 LangSmith 可观测）",
-        "主要内容": "- **LCEL**：声明式组合链式应用（`|` 管道语法）\n- **Agent / 工具调用**框架：ReAct、函数调用、多智能体\n- **RAG** 组件链：文档加载、切分、向量检索、重排\n- **LangGraph**（独立库）：有状态、可持久化的多智能体编排",
-        "对我的价值": "做 LLM 应用时的主要参照；用 tour-app 同类的 DeepSeek 集成场景时，可对比\"框架 vs 手写\"的取舍；学习 RAG / Agent 的标准架构。",
+        "一句话": "构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示词、工具、记忆、检索统一成可组合的组件。",
+        "内容与亮点": "- **核心能力**：`LCEL` 声明式链式应用、Agent/工具调用、RAG 组件链、`LangGraph` 有状态多智能体编排\n- **生态**：内置大量第三方集成（各家模型供应商、向量库、工具），教程多、社区大，问题易搜到答案\n- **适用**：从快速原型到生产级应用（配合 LangSmith 做可观测）",
+        "如何使用": "```bash\npip install langchain langchain-openai\n```\n- 常用搭配：`langchain-core`（核心）、`langchain-community`（集成）、`langgraph`（编排）\n- 快速上手：https://python.langchain.com/docs/tutorials/",
+        "对我的价值": "做 LLM 应用时的主要参照；tour-app 同类的 DeepSeek 集成场景可对比「框架 vs 手写」的取舍；学习 RAG / Agent 的标准架构。",
         "实践心得（待实践）": ">"
       },
-      "body": "## 一句话\n构建 LLM 应用（Agent / RAG / 链式编排）最流行的 Python 框架。\n\n## 作用与亮点\n- 把模型调用、提示词、工具调用、记忆、检索统一成**可组合的组件**\n- 内置大量第三方集成：各家模型供应商、向量数据库、工具库\n- 生态最全、教程最多、社区最大，遇到问题基本都能搜到现成答案\n- 既适合快速原型，也支撑生产级应用（配合 LangSmith 可观测）\n\n## 主要内容\n- **LCEL**：声明式组合链式应用（`|` 管道语法）\n- **Agent / 工具调用**框架：ReAct、函数调用、多智能体\n- **RAG** 组件链：文档加载、切分、向量检索、重排\n- **LangGraph**（独立库）：有状态、可持久化的多智能体编排\n\n## 对我的价值\n做 LLM 应用时的主要参照；用 tour-app 同类的 DeepSeek 集成场景时，可对比\"框架 vs 手写\"的取舍；学习 RAG / Agent 的标准架构。\n\n## 实践心得（待实践）\n>",
+      "body": "## 一句话\n构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示词、工具、记忆、检索统一成可组合的组件。\n\n## 内容与亮点\n- **核心能力**：`LCEL` 声明式链式应用、Agent/工具调用、RAG 组件链、`LangGraph` 有状态多智能体编排\n- **生态**：内置大量第三方集成（各家模型供应商、向量库、工具），教程多、社区大，问题易搜到答案\n- **适用**：从快速原型到生产级应用（配合 LangSmith 做可观测）\n\n## 如何使用\n```bash\npip install langchain langchain-openai\n```\n- 常用搭配：`langchain-core`（核心）、`langchain-community`（集成）、`langgraph`（编排）\n- 快速上手：https://python.langchain.com/docs/tutorials/\n\n## 对我的价值\n做 LLM 应用时的主要参照；tour-app 同类的 DeepSeek 集成场景可对比「框架 vs 手写」的取舍；学习 RAG / Agent 的标准架构。\n\n## 实践心得（待实践）\n>",
       "file": "repos/ai-llm/langchain.md"
     },
     {
@@ -52,13 +52,13 @@
       "date_added": "2026-08-05",
       "sections": {
         "__lead__": "",
-        "一句话": "给一张参考图（耳机/机械/建筑/道具），自动重建为可动画、可改代码的纯代码 Three.js 模型。",
-        "作用与亮点": "- 明确选择**纯代码重建**路线：用基础几何体 + 程序化着色器 + 生成式几何搭出物体，而非神经渲染\n- 先评估图片是否适合重建，再判断物体类型、复杂度与质量目标\n- 生成前先整理 `detailInventory`，把倒角/螺丝/刻线/光泽/污渍等决定辨识度的细节安排到真实组件或材质\n- **质量门控**：分阶段制作（结构→形体→材质→表面细节→灯光→交互→优化），每轮渲染截图与原图对照做视觉检查，不过关就回改，通过才解锁下一轮\n- 代码模型可继续调色、移动零件、加动画，适合产品展示、浏览器小游戏、交互式官网",
-        "主要内容": "- Agent Skill：Claude Code / Codex / OpenCode 通用（`npx skills add img2threejs/img2threejs`，Claude Code 可直接 clone 进 `~/.claude/skills/`）\n- 官方 topics：threejs / webgl / procedural-generation / image-to-3d / ai-agents / computer-graphics / typescript\n- Token 高效：流程化拆解，避免智能体\"看一眼就乱写\"",
-        "对我的价值": "需要 3D 展示资产（产品/游戏/官网）时直接用；学习\"AI 智能体 + 程序化建模\"的工程化流水线（拆解→清单→分阶段→视觉自检）。",
+        "一句话": "给一张参考图（耳机 / 机械 / 建筑 / 道具），自动重建为**可动画、可改代码的纯代码 Three.js 模型**——图像转 3D，全程程序化而非神经渲染。",
+        "内容与亮点": "- **重建路线**：基础几何体 + 程序化着色器 + 生成式几何搭出物体，代码模型可继续调色、移动零件、加动画\n- **质量门控**：先评估可重建性 → 整理 `detailInventory`（倒角/螺丝/刻线等辨识度细节）→ 分 7 阶段制作 → 每轮渲染截图对照原图**视觉自检**，不过关回改\n- **Token 高效**：流程化拆解，避免智能体「看一眼就乱写」\n- **适用**：产品展示、浏览器小游戏、交互式官网的 3D 资产",
+        "如何使用": "```bash\n# Claude Code：clone 进 skills 目录\ngit clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs\n# Codex\nnpx skills add img2threejs/img2threejs -a codex\n```\n- 调用：附参考图 + `/img2threejs 把这个物体重构成 Three.js 模型，保持原有比例、角度和颜色`",
+        "对我的价值": "需要 3D 展示资产（产品/游戏/官网）时直接用；学习「AI 智能体 + 程序化建模」的工程化流水线（拆解 → 清单 → 分阶段 → 视觉自检）。",
         "实践心得（待实践）": ">"
       },
-      "body": "## 一句话\n给一张参考图（耳机/机械/建筑/道具），自动重建为可动画、可改代码的纯代码 Three.js 模型。\n\n## 作用与亮点\n- 明确选择**纯代码重建**路线：用基础几何体 + 程序化着色器 + 生成式几何搭出物体，而非神经渲染\n- 先评估图片是否适合重建，再判断物体类型、复杂度与质量目标\n- 生成前先整理 `detailInventory`，把倒角/螺丝/刻线/光泽/污渍等决定辨识度的细节安排到真实组件或材质\n- **质量门控**：分阶段制作（结构→形体→材质→表面细节→灯光→交互→优化），每轮渲染截图与原图对照做视觉检查，不过关就回改，通过才解锁下一轮\n- 代码模型可继续调色、移动零件、加动画，适合产品展示、浏览器小游戏、交互式官网\n\n## 主要内容\n- Agent Skill：Claude Code / Codex / OpenCode 通用（`npx skills add img2threejs/img2threejs`，Claude Code 可直接 clone 进 `~/.claude/skills/`）\n- 官方 topics：threejs / webgl / procedural-generation / image-to-3d / ai-agents / computer-graphics / typescript\n- Token 高效：流程化拆解，避免智能体\"看一眼就乱写\"\n\n## 对我的价值\n需要 3D 展示资产（产品/游戏/官网）时直接用；学习\"AI 智能体 + 程序化建模\"的工程化流水线（拆解→清单→分阶段→视觉自检）。\n\n## 实践心得（待实践）\n>",
+      "body": "## 一句话\n给一张参考图（耳机 / 机械 / 建筑 / 道具），自动重建为**可动画、可改代码的纯代码 Three.js 模型**——图像转 3D，全程程序化而非神经渲染。\n\n## 内容与亮点\n- **重建路线**：基础几何体 + 程序化着色器 + 生成式几何搭出物体，代码模型可继续调色、移动零件、加动画\n- **质量门控**：先评估可重建性 → 整理 `detailInventory`（倒角/螺丝/刻线等辨识度细节）→ 分 7 阶段制作 → 每轮渲染截图对照原图**视觉自检**，不过关回改\n- **Token 高效**：流程化拆解，避免智能体「看一眼就乱写」\n- **适用**：产品展示、浏览器小游戏、交互式官网的 3D 资产\n\n## 如何使用\n```bash\n# Claude Code：clone 进 skills 目录\ngit clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs\n# Codex\nnpx skills add img2threejs/img2threejs -a codex\n```\n- 调用：附参考图 + `/img2threejs 把这个物体重构成 Three.js 模型，保持原有比例、角度和颜色`\n\n## 对我的价值\n需要 3D 展示资产（产品/游戏/官网）时直接用；学习「AI 智能体 + 程序化建模」的工程化流水线（拆解 → 清单 → 分阶段 → 视觉自检）。\n\n## 实践心得（待实践）\n>",
       "file": "repos/frontend/img2threejs.md"
     },
     {
@@ -82,13 +82,13 @@
       "date_added": "2026-08-05",
       "sections": {
         "__lead__": "",
-        "一句话": "用几行声明式代码生成企业级后台管理界面的 React 框架（B2B 应用 UI 方案）。",
-        "作用与亮点": "- 声明式 `<Resource>` 定义，自动生成列表 / 创建 / 编辑 / 详情全套 CRUD\n- 内置列表筛选、排序、分页、批量操作、表单校验、主题定制\n- **Data Provider** 数据层抽象：REST / GraphQL / 自定义后端都能接\n- 插件生态丰富：导出、导入、富文本、地图、图表等",
-        "主要内容": "- `<Admin>` / `<Resource>` 声明式架构\n- Data Provider 数据层（把任意后端接口适配进来）\n- 200+ 组件：Table / Form / Autocomplete / Reference 等\n- `examples/` 目录提供可直接运行的完整示例（CRM / E-commerce / Blog）",
-        "对我的价值": "凡涉及后台 / 管理面板的项目可直接参照；其 data provider 分层思想可以借鉴到自研后台；示例项目可本地跑起来手动实践，学习大型 React 项目结构。",
+        "一句话": "一个用声明式代码快速生成**企业级后台管理界面**的 React 框架，几行 `<Resource>` 配置即可自动生成列表、创建、编辑、详情全套 CRUD。",
+        "内容与亮点": "- **核心架构**：`<Admin>` / `<Resource>` 声明式定义 + **Data Provider** 数据层抽象（REST / GraphQL / 自定义后端都能接）\n- **内置能力**：列表筛选、排序、分页、批量操作、表单校验、主题定制\n- **组件生态**：200+ 组件（Table / Form / Autocomplete / Reference），插件丰富（导出、导入、富文本、图表）\n- **适用**：B2B 后台、管理面板、内部工具",
+        "如何使用": "```bash\nnpm install react-admin\n```\n- 最低配置：`<Admin dataProvider={...}><Resource name=\"posts\" /></Admin>`\n- 完整可运行示例：https://github.com/marmelab/react-admin/tree/master/examples",
+        "对我的价值": "凡涉及后台/管理面板的项目可直接参照；**Data Provider 分层思想**可借鉴到自研后台；examples 可本地跑起来实践，学习大型 React 项目结构。",
         "实践心得（待实践）": ">"
       },
-      "body": "## 一句话\n用几行声明式代码生成企业级后台管理界面的 React 框架（B2B 应用 UI 方案）。\n\n## 作用与亮点\n- 声明式 `<Resource>` 定义，自动生成列表 / 创建 / 编辑 / 详情全套 CRUD\n- 内置列表筛选、排序、分页、批量操作、表单校验、主题定制\n- **Data Provider** 数据层抽象：REST / GraphQL / 自定义后端都能接\n- 插件生态丰富：导出、导入、富文本、地图、图表等\n\n## 主要内容\n- `<Admin>` / `<Resource>` 声明式架构\n- Data Provider 数据层（把任意后端接口适配进来）\n- 200+ 组件：Table / Form / Autocomplete / Reference 等\n- `examples/` 目录提供可直接运行的完整示例（CRM / E-commerce / Blog）\n\n## 对我的价值\n凡涉及后台 / 管理面板的项目可直接参照；其 data provider 分层思想可以借鉴到自研后台；示例项目可本地跑起来手动实践，学习大型 React 项目结构。\n\n## 实践心得（待实践）\n>",
+      "body": "## 一句话\n一个用声明式代码快速生成**企业级后台管理界面**的 React 框架，几行 `<Resource>` 配置即可自动生成列表、创建、编辑、详情全套 CRUD。\n\n## 内容与亮点\n- **核心架构**：`<Admin>` / `<Resource>` 声明式定义 + **Data Provider** 数据层抽象（REST / GraphQL / 自定义后端都能接）\n- **内置能力**：列表筛选、排序、分页、批量操作、表单校验、主题定制\n- **组件生态**：200+ 组件（Table / Form / Autocomplete / Reference），插件丰富（导出、导入、富文本、图表）\n- **适用**：B2B 后台、管理面板、内部工具\n\n## 如何使用\n```bash\nnpm install react-admin\n```\n- 最低配置：`<Admin dataProvider={...}><Resource name=\"posts\" /></Admin>`\n- 完整可运行示例：https://github.com/marmelab/react-admin/tree/master/examples\n\n## 对我的价值\n凡涉及后台/管理面板的项目可直接参照；**Data Provider 分层思想**可借鉴到自研后台；examples 可本地跑起来实践，学习大型 React 项目结构。\n\n## 实践心得（待实践）\n>",
       "file": "repos/frontend/react-admin.md"
     },
     {
@@ -111,13 +111,13 @@
       "date_added": "2026-08-05",
       "sections": {
         "__lead__": "",
-        "一句话": "一个 Agent Skill，把任意品牌资料变成「滚动飞越式」的 3D 电影感落地页——滚轮像镜头一样穿越场景。",
-        "作用与亮点": "- 把\"视觉设计 + 视频生成 + 镜头衔接 + 网页动效\"整套流程封装成可调用的 Skill\n- 喂入品牌资料、产品信息、视觉风格后，自动规划场景、生成图片和镜头视频，并接进网页滚动播放引擎\n- 滚动即镜头飞行，章节文案/卖点随场景出现，回滚镜头倒退，体验像一支可控制的品牌短片\n- 适用：产品发布页、品牌官网、旅行项目、地产展示、个人作品集",
-        "主要内容": "- 完整的 Skill 本体 + 提示词模板 + 批处理脚本 + 网页滚动播放引擎\n- 图片/视频需按项目单独生成（仓库不附带素材）\n- 视频链路：Monid CLI 调 Seedance 2.0；Higgsfield CLI 生成场景图；ffmpeg/ffprobe 做帧提取编码；竖屏画布需 Python3 + Pillow\n- 安装：Claude Code 插件市场 `oso95/scroll-world`，或 `npx skills add oso95/scroll-world`",
-        "对我的价值": "做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究\"AI 驱动的前端动画生产流水线\"的上游参照。",
+        "一句话": "一个 Agent Skill，把任意品牌资料变成**「滚动飞越式」3D 电影感落地页**——滚轮像镜头一样穿越场景，章节文案随场景出现。",
+        "内容与亮点": "- **核心能力**：喂入品牌资料/产品信息/视觉风格 → 自动规划场景、生成图片和镜头视频，接进网页**滚动播放引擎**\n- **交互效果**：滚动即镜头飞行、回滚即倒退，体验像一支可用鼠标控制进度的品牌短片\n- **适用**：产品发布页、品牌官网、旅行项目、地产展示、个人作品集\n- **素材说明**：图片/视频需按每个项目单独生成，仓库不附带素材",
+        "如何使用": "```bash\n# Claude Code 插件市场安装\n/plugin marketplace add oso95/scroll-world\n/plugin install scroll-world@scroll-world\n# Codex 等 Agent Skills 工具\nnpx skills add oso95/scroll-world\n```\n- 依赖：`Monid CLI`（视频，调 Seedance 2.0）、`Higgsfield CLI`（场景图）、`ffmpeg`/`ffprobe`（帧提取编码）、竖屏画布需 Python3 + Pillow\n- 调用：输入 `/scroll-world` 或描述想要的滚动品牌世界",
+        "对我的价值": "做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究「AI 驱动前端动画生产流水线」的上游参照。",
         "实践心得（待实践）": ">"
       },
-      "body": "## 一句话\n一个 Agent Skill，把任意品牌资料变成「滚动飞越式」的 3D 电影感落地页——滚轮像镜头一样穿越场景。\n\n## 作用与亮点\n- 把\"视觉设计 + 视频生成 + 镜头衔接 + 网页动效\"整套流程封装成可调用的 Skill\n- 喂入品牌资料、产品信息、视觉风格后，自动规划场景、生成图片和镜头视频，并接进网页滚动播放引擎\n- 滚动即镜头飞行，章节文案/卖点随场景出现，回滚镜头倒退，体验像一支可控制的品牌短片\n- 适用：产品发布页、品牌官网、旅行项目、地产展示、个人作品集\n\n## 主要内容\n- 完整的 Skill 本体 + 提示词模板 + 批处理脚本 + 网页滚动播放引擎\n- 图片/视频需按项目单独生成（仓库不附带素材）\n- 视频链路：Monid CLI 调 Seedance 2.0；Higgsfield CLI 生成场景图；ffmpeg/ffprobe 做帧提取编码；竖屏画布需 Python3 + Pillow\n- 安装：Claude Code 插件市场 `oso95/scroll-world`，或 `npx skills add oso95/scroll-world`\n\n## 对我的价值\n做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究\"AI 驱动的前端动画生产流水线\"的上游参照。\n\n## 实践心得（待实践）\n>",
+      "body": "## 一句话\n一个 Agent Skill，把任意品牌资料变成**「滚动飞越式」3D 电影感落地页**——滚轮像镜头一样穿越场景，章节文案随场景出现。\n\n## 内容与亮点\n- **核心能力**：喂入品牌资料/产品信息/视觉风格 → 自动规划场景、生成图片和镜头视频，接进网页**滚动播放引擎**\n- **交互效果**：滚动即镜头飞行、回滚即倒退，体验像一支可用鼠标控制进度的品牌短片\n- **适用**：产品发布页、品牌官网、旅行项目、地产展示、个人作品集\n- **素材说明**：图片/视频需按每个项目单独生成，仓库不附带素材\n\n## 如何使用\n```bash\n# Claude Code 插件市场安装\n/plugin marketplace add oso95/scroll-world\n/plugin install scroll-world@scroll-world\n# Codex 等 Agent Skills 工具\nnpx skills add oso95/scroll-world\n```\n- 依赖：`Monid CLI`（视频，调 Seedance 2.0）、`Higgsfield CLI`（场景图）、`ffmpeg`/`ffprobe`（帧提取编码）、竖屏画布需 Python3 + Pillow\n- 调用：输入 `/scroll-world` 或描述想要的滚动品牌世界\n\n## 对我的价值\n做品牌/作品集类官网时可直接装 Skill 让 AI 出整站；研究「AI 驱动前端动画生产流水线」的上游参照。\n\n## 实践心得（待实践）\n>",
       "file": "repos/frontend/scroll-world.md"
     },
     {
@@ -139,13 +139,13 @@
       "date_added": "2026-08-05",
       "sections": {
         "__lead__": "",
-        "一句话": "免费编程书籍 / 课程 / 教程的巨型清单，堪称编程学习资源界的维基百科（GitHub 上星数最高的仓库之一）。",
-        "作用与亮点": "- 解决\"想学某门技术但找不到高质量免费资料\"的问题\n- 收录数万条免费电子书、免费课程、交互式教程、播客的链接，全部由社区持续维护\n- 按**自然语言**（50+ 种）和**技术主题**双重组织，中文版单独成册\n- 全部指向原始免费资源，零付费墙",
-        "主要内容": "- `free-programming-books.md`：按语言分组的免费书籍\n- `free-courses.md`：免费在线课程（Coursera / edX / YouTube 等）\n- 交互式教程、播客、MOOC、游戏化学习等子清单\n- 中文翻译仓库：`EbookFoundation/free-programming-books-zh_CN`",
-        "对我的价值": "学新语言 / 新框架前来这里查免费资料；写技术文章或做技术选型时引用权威出处；整理学习路线时当目录用。",
+        "一句话": "收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（GitHub 星数最高的仓库之一）。",
+        "内容与亮点": "- **收录范围**：免费电子书、免费课程、交互式教程、播客、杂志，社区持续维护、零付费墙\n- **组织方式**：按自然语言（50+ 种）与技术主题双重分类，**中文版单独成册**（`free-programming-books-zh_CN`）\n- **核心文件**：`free-programming-books.md`（按语言分组书籍）、`free-courses.md`（免费课程）、交互式教程/播客/游戏子清单",
+        "如何使用": "- 在线浏览：https://ebookfoundation.github.io/free-programming-books/\n- 本地使用：clone 仓库后全文检索，或直接网页浏览",
+        "对我的价值": "学新语言/新框架前来查免费资料；技术选型或写文章时引用权威出处；做学习路线时当目录用。",
         "实践心得（待实践）": ">"
       },
-      "body": "## 一句话\n免费编程书籍 / 课程 / 教程的巨型清单，堪称编程学习资源界的维基百科（GitHub 上星数最高的仓库之一）。\n\n## 作用与亮点\n- 解决\"想学某门技术但找不到高质量免费资料\"的问题\n- 收录数万条免费电子书、免费课程、交互式教程、播客的链接，全部由社区持续维护\n- 按**自然语言**（50+ 种）和**技术主题**双重组织，中文版单独成册\n- 全部指向原始免费资源，零付费墙\n\n## 主要内容\n- `free-programming-books.md`：按语言分组的免费书籍\n- `free-courses.md`：免费在线课程（Coursera / edX / YouTube 等）\n- 交互式教程、播客、MOOC、游戏化学习等子清单\n- 中文翻译仓库：`EbookFoundation/free-programming-books-zh_CN`\n\n## 对我的价值\n学新语言 / 新框架前来这里查免费资料；写技术文章或做技术选型时引用权威出处；整理学习路线时当目录用。\n\n## 实践心得（待实践）\n>",
+      "body": "## 一句话\n收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（GitHub 星数最高的仓库之一）。\n\n## 内容与亮点\n- **收录范围**：免费电子书、免费课程、交互式教程、播客、杂志，社区持续维护、零付费墙\n- **组织方式**：按自然语言（50+ 种）与技术主题双重分类，**中文版单独成册**（`free-programming-books-zh_CN`）\n- **核心文件**：`free-programming-books.md`（按语言分组书籍）、`free-courses.md`（免费课程）、交互式教程/播客/游戏子清单\n\n## 如何使用\n- 在线浏览：https://ebookfoundation.github.io/free-programming-books/\n- 本地使用：clone 仓库后全文检索，或直接网页浏览\n\n## 对我的价值\n学新语言/新框架前来查免费资料；技术选型或写文章时引用权威出处；做学习路线时当目录用。\n\n## 实践心得（待实践）\n>",
       "file": "repos/learning/free-programming-books.md"
     }
   ]

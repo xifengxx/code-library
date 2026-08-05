@@ -11,22 +11,23 @@ date_added: "2026-08-05"
 ---
 
 ## 一句话
-用几行声明式代码生成企业级后台管理界面的 React 框架（B2B 应用 UI 方案）。
+一个用声明式代码快速生成**企业级后台管理界面**的 React 框架，几行 `<Resource>` 配置即可自动生成列表、创建、编辑、详情全套 CRUD。
 
-## 作用与亮点
-- 声明式 `<Resource>` 定义，自动生成列表 / 创建 / 编辑 / 详情全套 CRUD
-- 内置列表筛选、排序、分页、批量操作、表单校验、主题定制
-- **Data Provider** 数据层抽象：REST / GraphQL / 自定义后端都能接
-- 插件生态丰富：导出、导入、富文本、地图、图表等
+## 内容与亮点
+- **核心架构**：`<Admin>` / `<Resource>` 声明式定义 + **Data Provider** 数据层抽象（REST / GraphQL / 自定义后端都能接）
+- **内置能力**：列表筛选、排序、分页、批量操作、表单校验、主题定制
+- **组件生态**：200+ 组件（Table / Form / Autocomplete / Reference），插件丰富（导出、导入、富文本、图表）
+- **适用**：B2B 后台、管理面板、内部工具
 
-## 主要内容
-- `<Admin>` / `<Resource>` 声明式架构
-- Data Provider 数据层（把任意后端接口适配进来）
-- 200+ 组件：Table / Form / Autocomplete / Reference 等
-- `examples/` 目录提供可直接运行的完整示例（CRM / E-commerce / Blog）
+## 如何使用
+```bash
+npm install react-admin
+```
+- 最低配置：`<Admin dataProvider={...}><Resource name="posts" /></Admin>`
+- 完整可运行示例：https://github.com/marmelab/react-admin/tree/master/examples
 
 ## 对我的价值
-凡涉及后台 / 管理面板的项目可直接参照；其 data provider 分层思想可以借鉴到自研后台；示例项目可本地跑起来手动实践，学习大型 React 项目结构。
+凡涉及后台/管理面板的项目可直接参照；**Data Provider 分层思想**可借鉴到自研后台；examples 可本地跑起来实践，学习大型 React 项目结构。
 
 ## 实践心得（待实践）
 >

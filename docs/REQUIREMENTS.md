@@ -33,7 +33,7 @@
 ---
 name / repo_url / article_url[] / category / tags[] / language / stars / status / date_added
 ---
-## 一句话 / ## 作用与亮点 / ## 主要内容 / ## 对我的价值 / ## 实践心得（待实践）
+## 一句话（1~2 句） / ## 内容与亮点（合并原作用与亮点+主要内容，列表+加粗） / ## 如何使用（安装/调用，命令代码块） / ## 对我的价值 / ## 实践心得（待实践）
 ```
 
 选型理由：① Claude Code 直接读写，无需后端数据库；② git 版本管理可回滚；③ Web 构建时解析 frontmatter，天然一体化；④ **repos/ 是唯一事实来源**，Web/Word 都是生成产物。
