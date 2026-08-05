@@ -20,14 +20,8 @@
 # 浏览网页端
 cd web && npm run dev        # 浏览器打开 http://localhost:5174
 
-# 重建索引（每次入库后运行）
-node scripts/build-index.mjs
-
-# 生成 Word（pandoc 快速版）
-bash scripts/build-word.sh
-
-# 生成 Word（python-docx 精装版）
-python3 scripts/build-word-fancy.py
+# 一键重建三版本（每次入库后运行：MD 索引 + 网页数据 + Word 快速版/精装版）
+bash scripts/rebuild-all.sh
 ```
 
 ## 分类（一级固定枚举，标签自由）
