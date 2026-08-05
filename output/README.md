@@ -1,6 +1,6 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **7** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **8** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
@@ -9,7 +9,7 @@
 | 后端 | 0 |
 | 数据库 / 存储 | 0 |
 | DevOps / 云 | 0 |
-| 开发工具 / CLI | 0 |
+| 开发工具 / CLI | 1 |
 | 移动端 | 0 |
 | 学习资源 | 1 |
 | 项目模板 / 示例 | 0 |
@@ -30,6 +30,12 @@
 | [impeccable](https://github.com/pbakaus/impeccable) | 给 AI 编程智能体的**设计规范系统**：1 个 Skill、23 条命令、59 条确定性检测规则，消除 AI 生成前 | JavaScript | 55.5k | agent-skill, design-system, ui, claude-code, a11y | 收藏 |
 | [react-admin](https://github.com/marmelab/react-admin) | 一个用声明式代码快速生成**企业级后台管理界面**的 React 框架，几行 `<Resource>` 配置即可自动生成 | TypeScript | 26k | React, 后台管理, CRUD, 低代码, TypeScript | 收藏 |
 | [scroll-world](https://github.com/oso95/scroll-world) | 一个 Agent Skill，把任意品牌资料变成**「滚动飞越式」3D 电影感落地页**——滚轮像镜头一样穿越场景，章节 | JavaScript | 7.5k | web-animation, landing-page, agent-skill, cinematic, 3d | 收藏 |
+
+## 开发工具 / CLI（1）
+
+| 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
+|---|---|---|---|---|---|
+| [book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 把任意技术书 PDF、文档文件夹或资料合集，**提炼成一个结构化 Claude Code Skill**——框架、决策规 | Python | 16.7k | agent-skill, claude-code, pdf, skill-creator, 知识管理 | 收藏 |
 
 ## 学习资源（1）
 
