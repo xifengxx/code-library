@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+output/word/*.docx
+
+# 系统
+.DS_Store
+*.log
+
+# 环境（禁止提交任何密钥）
+.env
+.env.*
+
+# AuraKit hook 自动生成
+.aura/
+
+# Python
+__pycache__/
+*.pyc
