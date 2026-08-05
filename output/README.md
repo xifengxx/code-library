@@ -1,11 +1,11 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **5** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **7** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
 | AI / LLM | 1 |
-| 前端 | 3 |
+| 前端 | 5 |
 | 后端 | 0 |
 | 数据库 / 存储 | 0 |
 | DevOps / 云 | 0 |
@@ -21,11 +21,13 @@
 |---|---|---|---|---|---|
 | [langchain](https://github.com/langchain-ai/langchain) | 构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示 | Python | 105k | LLM, Agent, RAG, 框架, Python | 收藏 |
 
-## 前端（3）
+## 前端（5）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
+| [hallmark](https://github.com/Nutlope/hallmark) | 一个给 Claude Code / Cursor / Codex 的设计 Skill，专门**拒绝看起来像 AI 生成的 | CSS | 21.9k | agent-skill, design, anti-slop, css, claude-code | 收藏 |
 | [img2threejs](https://github.com/img2threejs/img2threejs) | 给一张参考图（耳机 / 机械 / 建筑 / 道具），自动重建为**可动画、可改代码的纯代码 Three.js 模型**— | Python | 9.8k | threejs, webgl, image-to-3d, procedural-generation, claude-code, ai-agents | 收藏 |
+| [impeccable](https://github.com/pbakaus/impeccable) | 给 AI 编程智能体的**设计规范系统**：1 个 Skill、23 条命令、59 条确定性检测规则，消除 AI 生成前 | JavaScript | 55.5k | agent-skill, design-system, ui, claude-code, a11y | 收藏 |
 | [react-admin](https://github.com/marmelab/react-admin) | 一个用声明式代码快速生成**企业级后台管理界面**的 React 框架，几行 `<Resource>` 配置即可自动生成 | TypeScript | 26k | React, 后台管理, CRUD, 低代码, TypeScript | 收藏 |
 | [scroll-world](https://github.com/oso95/scroll-world) | 一个 Agent Skill，把任意品牌资料变成**「滚动飞越式」3D 电影感落地页**——滚轮像镜头一样穿越场景，章节 | JavaScript | 7.5k | web-animation, landing-page, agent-skill, cinematic, 3d | 收藏 |
 
