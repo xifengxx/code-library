@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# build-word.sh — pandoc 快速版：MD → docx（每分类一份 + 全量一份）
+# build-word.sh — pandoc 快速版：MD → docx（每仓库一份 + 每分类一份 + 全量一份）
 # 依赖：pandoc（brew install pandoc）
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -23,6 +23,14 @@ if [ ${#ALL[@]} -gt 0 ]; then
   pandoc --toc --toc-depth=2 -f markdown -t docx "${ALL[@]}" -o "$OUT/全部仓库索引.docx"
   echo "✅ $OUT/全部仓库索引.docx (${#ALL[@]} 条)"
 fi
+
+# 每仓库一份（文件名：<分类>_<仓库名>.docx）
+for f in "${ALL[@]}"; do
+  rname=$(basename "$f" .md)
+  rcat=$(basename "$(dirname "$f")")
+  pandoc -f markdown -t docx "$f" -o "$OUT/${rcat}_${rname}.docx"
+  echo "✅ $OUT/${rcat}_${rname}.docx"
+done
 
 # 每分类一份
 for dir in repos/*/; do
