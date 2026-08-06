@@ -1,18 +1,30 @@
 import { Link } from 'react-router-dom'
-import { LABELS, fmtStars } from '../data/categories.js'
+import { Star } from '@phosphor-icons/react'
+import { LABELS, fmtStars, repoOgUrl } from '../data/categories.js'
 
 export default function Card({ e }) {
   const summary = (e.sections?.['一句话'] || '').replace(/\n+/g, ' ')
   const stars = fmtStars(e.stars)
+  const og = repoOgUrl(e.repo_url)
   return (
     <article className="card">
+      {og && (
+        <div className="card-thumb">
+          <img
+            src={og}
+            alt={e.name}
+            loading="lazy"
+            onError={(ev) => { ev.currentTarget.style.display = 'none' }}
+          />
+        </div>
+      )}
       <Link to={`/repo/${encodeURIComponent(e.name)}`} className="card-title">
         <h3>{e.name}</h3>
       </Link>
       <div className="card-meta">
         <span className="badge cat">{LABELS[e.category] || e.category}</span>
         {e.language && <span className="badge">{e.language}</span>}
-        {stars && <span className="badge star">⭐ {stars}</span>}
+        {stars && <span className="badge star"><Star size={11} weight="fill" /> {stars}</span>}
         <span className={`badge status ${e.status}`}>{e.status}</span>
       </div>
       <p className="card-summary">{summary || '（暂无一句话简介）'}</p>

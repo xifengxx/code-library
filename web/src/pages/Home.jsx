@@ -28,15 +28,18 @@ export default function Home({ data }) {
       <section className="cats">
         <h2>按分类浏览</h2>
         <div className="cat-grid">
-          {Object.keys(LABELS).filter((c) => byCat[c]).map((c) => (
-            <Link key={c} to={`/browse?cat=${c}`} className="cat-card">
-              <span className="cat-icon">{ICONS[c]}</span>
-              <div className="cat-info">
-                <b>{LABELS[c]}</b>
-                <span>{byCat[c].length} 个仓库</span>
-              </div>
-            </Link>
-          ))}
+          {Object.keys(LABELS).filter((c) => byCat[c]).map((c) => {
+            const CatIcon = ICONS[c]
+            return (
+              <Link key={c} to={`/browse?cat=${c}`} className="cat-card">
+                <span className="cat-icon"><CatIcon size={22} /></span>
+                <div className="cat-info">
+                  <b>{LABELS[c]}</b>
+                  <span>{byCat[c].length} 个仓库</span>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </section>
 

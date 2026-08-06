@@ -314,6 +314,37 @@ a:hover { color: var(--accent-hover); }
 .footer .footer-hint { opacity: 0.8; }
 .footer code { background: rgba(255,255,255,0.05); padding: 1px 6px; border-radius: 5px; font-family: var(--mono); font-size: 11px; }
 
+/* ── 仓库预览图 ───────────────────────── */
+.card-thumb {
+  aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden;
+  border: 1px solid var(--border-subtle); position: relative;
+  background: linear-gradient(135deg, rgba(94, 106, 210, 0.12), rgba(255, 255, 255, 0.02));
+}
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.detail-banner {
+  aspect-ratio: 21 / 9; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border); margin-bottom: 20px; position: relative;
+  background: linear-gradient(135deg, rgba(94, 106, 210, 0.14), rgba(255, 255, 255, 0.02));
+}
+.detail-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── 搜索框图标 ───────────────────────── */
+.search-wrap { position: relative; margin-bottom: 18px; }
+.search-wrap .search { margin-bottom: 0; padding-left: 40px; }
+.search-icon {
+  position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+  color: var(--text-tertiary); pointer-events: none;
+}
+
+/* ── 图标与文字对齐 ───────────────────── */
+.badge { gap: 5px; }
+.badge svg, .btn svg, .back svg { flex-shrink: 0; }
+.btn { gap: 6px; }
+.back { display: inline-flex; align-items: center; gap: 6px; }
+.brand-mark { color: #fff; }
+.cat-icon { display: inline-flex; }
+
 /* ── 入场动效（一次性、克制的浮现） ─────── */
 @keyframes riseIn {
   from { opacity: 0; transform: translateY(8px); }

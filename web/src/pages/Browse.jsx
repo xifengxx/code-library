@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { MagnifyingGlass } from '@phosphor-icons/react'
 import Card from '../components/Card.jsx'
 import { CATEGORIES, LABELS } from '../data/categories.js'
 
@@ -23,12 +24,15 @@ export default function Browse({ data }) {
   return (
     <div className="browse">
       <h1>浏览仓库</h1>
-      <input
-        className="search"
-        placeholder="🔍 搜索名称 / 语言 / 描述 / 标签…"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-      />
+      <div className="search-wrap">
+        <MagnifyingGlass size={16} className="search-icon" />
+        <input
+          className="search"
+          placeholder="搜索名称 / 语言 / 描述 / 标签…"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+      </div>
       <div className="chips">
         <button className={cat === 'all' ? 'chip active' : 'chip'} onClick={() => setParams({})}>全部 {data.entries.length}</button>
         {CATEGORIES.map((c) => (

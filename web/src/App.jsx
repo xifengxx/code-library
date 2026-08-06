@@ -18,7 +18,7 @@ export default function App() {
         </Routes>
       </main>
       <footer className="footer">
-        📚 Code Library · 个人代码仓库参照库
+        Code Library · 个人代码仓库参照库
         <span className="footer-hint">数据源 <code>repos/</code> · 入库后运行 <code>node scripts/build-index.mjs</code> 刷新</span>
       </footer>
     </div>
