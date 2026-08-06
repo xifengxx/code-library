@@ -43,7 +43,7 @@
   --card-bg: #191a1b;
   --card-bg-hover: #28282c;
 
-  --font: 'Inter', 'Inter Variable', 'SF Pro Display', -apple-system, system-ui, 'Segoe UI', sans-serif;
+  --font: 'Inter Variable', 'Inter', 'SF Pro Display', -apple-system, system-ui, 'Segoe UI', sans-serif;
   --mono: ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
@@ -63,6 +63,13 @@ body {
 }
 
 ::selection { background: rgba(113, 112, 255, 0.35); color: var(--text-primary); }
+
+/* 键盘焦点可见性（taste-skill a11y） */
+:focus-visible {
+  outline: 2px solid var(--accent-active);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -233,7 +240,7 @@ a:hover { color: var(--accent-hover); }
   outline: none; margin-bottom: 18px;
   transition: border-color .15s, box-shadow .15s;
 }
-.search::placeholder { color: var(--text-quaternary); }
+.search::placeholder { color: var(--text-tertiary); }
 .search:focus { border-color: var(--accent-active); box-shadow: 0 0 0 3px rgba(113, 112, 255, 0.18); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .chip {
