@@ -5,7 +5,13 @@ import { LABELS, fmtStars } from '../data/categories.js'
 
 export default function Detail({ data }) {
   const { name } = useParams()
-  const e = data.entries.find((x) => x.name === decodeURIComponent(name))
+  let decoded
+  try {
+    decoded = decodeURIComponent(name)
+  } catch {
+    decoded = name
+  }
+  const e = data.entries.find((x) => x.name === decoded)
 
   if (!e) {
     return (

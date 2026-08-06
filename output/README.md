@@ -1,6 +1,6 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **8** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **9** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
@@ -11,7 +11,7 @@
 | DevOps / 云 | 0 |
 | 开发工具 / CLI | 1 |
 | 移动端 | 0 |
-| 学习资源 | 1 |
+| 学习资源 | 2 |
 | 项目模板 / 示例 | 0 |
 | 其他 | 0 |
 
@@ -37,8 +37,9 @@
 |---|---|---|---|---|---|
 | [book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 把任意技术书 PDF、文档文件夹或资料合集，**提炼成一个结构化 Claude Code Skill**——框架、决策规 | Python | 16.7k | agent-skill, claude-code, pdf, skill-creator, 知识管理 | 收藏 |
 
-## 学习资源（1）
+## 学习资源（2）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
+| [AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners) | 微软官方出品的 **「AI 入门」免费课程**仓库：12 周、24 课，覆盖神经网络、计算机视觉、NLP、生成式 AI， | Jupyter Notebook | 62.5k | ai, machine-learning, deep-learning, 课程, 微软, beginner | 收藏 |
 | [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（Git | HTML | 360k | ebook, 教程, 资源大全, 开源 | 收藏 |
