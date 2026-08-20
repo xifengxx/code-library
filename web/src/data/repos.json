@@ -2,6 +2,36 @@
   "source": "repos/",
   "entries": [
     {
+      "name": "adhd",
+      "repo_url": "https://github.com/UditAkhourii/adhd",
+      "article_url": [
+        "https://divergent.sh"
+      ],
+      "category": "ai-llm",
+      "tags": [
+        "Agent",
+        "思维发散",
+        "Tree-of-Thought",
+        "Claude",
+        "创意",
+        "TypeScript"
+      ],
+      "language": "TypeScript",
+      "stars": 3619,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "给 coding agent 用的「发散思维」Skill——用 **Tree-of-Thought + pruning（剪枝）** 架构,硬性解决 AI 过早收敛、想法不够发散的问题。",
+        "内容与亮点": "- **核心洞察**：Chain-of-Thought 的问题不是「不够发散」而是「过早收敛」。ADHD 用架构手段解决 autoregressive 模型天然会走捷径的问题\n- **Diverge → Score → Prune → Deepen** 四步流程：选 5 个认知框架（硬件工程师 / 10 岁小孩 / 竞争者视角 / 生物学隐喻 / 速通玩家…）并行生成 N 个完全隔离的想法\n- **生成器与评价器之间有硬墙**：分开的 LLM 调用、相反的 system prompt,防止自评偏见\n- **适用场景**：架构与设计决策、模糊 debug（无已知根因）、开放性 ideation、命名、战略与高风险判断\n- **效果验证**：eval 里 trap detection 领先 7.67 分（5.2 倍）\n- **技术栈**：基于 **Claude & Codex Agent SDK**,Node.js / TypeScript",
+        "如何使用": "```bash\n# 作为 skill 安装/引用（按 README）\n/adhd name this function that batches requests and retries with backoff\n/adhd 设计一个能抗 leader election 的 rate limiter\n```",
+        "对我的价值": "把「发散思维」从 prompt 层面提升到架构层面——处理多方案设计、模糊问题排查、创意工作时的强参照。适合在需要创造性和跨学科判断的任务里实践,对比普通单次推理的质量差异。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n给 coding agent 用的「发散思维」Skill——用 **Tree-of-Thought + pruning（剪枝）** 架构,硬性解决 AI 过早收敛、想法不够发散的问题。\n\n## 内容与亮点\n- **核心洞察**：Chain-of-Thought 的问题不是「不够发散」而是「过早收敛」。ADHD 用架构手段解决 autoregressive 模型天然会走捷径的问题\n- **Diverge → Score → Prune → Deepen** 四步流程：选 5 个认知框架（硬件工程师 / 10 岁小孩 / 竞争者视角 / 生物学隐喻 / 速通玩家…）并行生成 N 个完全隔离的想法\n- **生成器与评价器之间有硬墙**：分开的 LLM 调用、相反的 system prompt,防止自评偏见\n- **适用场景**：架构与设计决策、模糊 debug（无已知根因）、开放性 ideation、命名、战略与高风险判断\n- **效果验证**：eval 里 trap detection 领先 7.67 分（5.2 倍）\n- **技术栈**：基于 **Claude & Codex Agent SDK**,Node.js / TypeScript\n\n## 如何使用\n```bash\n# 作为 skill 安装/引用（按 README）\n/adhd name this function that batches requests and retries with backoff\n/adhd 设计一个能抗 leader election 的 rate limiter\n```\n\n## 对我的价值\n把「发散思维」从 prompt 层面提升到架构层面——处理多方案设计、模糊问题排查、创意工作时的强参照。适合在需要创造性和跨学科判断的任务里实践,对比普通单次推理的质量差异。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/ai-llm/adhd.md"
+    },
+    {
       "name": "langchain",
       "repo_url": "https://github.com/langchain-ai/langchain",
       "article_url": [
@@ -30,6 +60,33 @@
       },
       "body": "## 一句话\n构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示词、工具、记忆、检索统一成可组合的组件。\n\n## 内容与亮点\n- **核心能力**：`LCEL` 声明式链式应用、Agent/工具调用、RAG 组件链、`LangGraph` 有状态多智能体编排\n- **生态**：内置大量第三方集成（各家模型供应商、向量库、工具），教程多、社区大，问题易搜到答案\n- **适用**：从快速原型到生产级应用（配合 LangSmith 做可观测）\n\n## 如何使用\n```bash\npip install langchain langchain-openai\n```\n- 常用搭配：`langchain-core`（核心）、`langchain-community`（集成）、`langgraph`（编排）\n- 快速上手：https://python.langchain.com/docs/tutorials/\n\n## 对我的价值\n做 LLM 应用时的主要参照；tour-app 同类的 DeepSeek 集成场景可对比「框架 vs 手写」的取舍；学习 RAG / Agent 的标准架构。\n\n## 实践心得（待实践）\n>",
       "file": "repos/ai-llm/langchain.md"
+    },
+    {
+      "name": "native-feel-skill",
+      "repo_url": "https://github.com/yetone/native-feel-skill",
+      "article_url": [],
+      "category": "ai-llm",
+      "tags": [
+        "Agent-skill",
+        "桌面应用",
+        "跨平台",
+        "UI设计",
+        "Raycast"
+      ],
+      "language": "Markdown",
+      "stars": 1876,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和对 Raycast Beta.app 的逆向工程。",
+        "内容与亮点": "- **核心能力**：让 AI 设计出的桌面应用在 **macOS 和 Windows** 上都感觉像原生应用,而非网页套壳\n- **八大架构原则**：提炼桌面应用设计的核心准则\n- **四层架构**：给出跨平台应用的层次化结构\n- **WebKit / WebView2 生存指南**：处理嵌入式 webview 的实战经验\n- **75 项上线审计清单**（ship audit）：上线前的逐项检查\n- **两大用途**：重构现有应用使其更具原生感、从零开发跨平台原生体验应用",
+        "如何使用": "```bash\n# 作为 Agent Skill 安装/引用（按 README）\n```",
+        "对我的价值": "做桌面应用 / Electron / Tauri 项目时,「避免 AI 应用一股网页味」的实操参照。尤其适合从 web 技术栈做跨平台桌面产品时,学习如何让界面和行为贴近系统原生规范。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和对 Raycast Beta.app 的逆向工程。\n\n## 内容与亮点\n- **核心能力**：让 AI 设计出的桌面应用在 **macOS 和 Windows** 上都感觉像原生应用,而非网页套壳\n- **八大架构原则**：提炼桌面应用设计的核心准则\n- **四层架构**：给出跨平台应用的层次化结构\n- **WebKit / WebView2 生存指南**：处理嵌入式 webview 的实战经验\n- **75 项上线审计清单**（ship audit）：上线前的逐项检查\n- **两大用途**：重构现有应用使其更具原生感、从零开发跨平台原生体验应用\n\n## 如何使用\n```bash\n# 作为 Agent Skill 安装/引用（按 README）\n```\n\n## 对我的价值\n做桌面应用 / Electron / Tauri 项目时,「避免 AI 应用一股网页味」的实操参照。尤其适合从 web 技术栈做跨平台桌面产品时,学习如何让界面和行为贴近系统原生规范。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/ai-llm/native-feel-skill.md"
     },
     {
       "name": "hallmark",
@@ -179,6 +236,92 @@
       "file": "repos/frontend/scroll-world.md"
     },
     {
+      "name": "exercises-dataset",
+      "repo_url": "https://github.com/hasaneyldrm/exercises-dataset",
+      "article_url": [],
+      "category": "database",
+      "tags": [
+        "数据集",
+        "健身",
+        "JSON",
+        "GIF",
+        "react-native"
+      ],
+      "language": "HTML",
+      "stars": 19803,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "健身动作的结构化数据集——收录 **1324 个动作**,含动画 GIF、缩略图、肌肉群/器械数据和 6 种语言的分步说明,是 LogPress 应用的数据层。",
+        "内容与亮点": "- **核心能力**：1324 个健身动作,带 `animation GIF`、`180×180` 缩略图、肌肉群与器械数据、6 语言分步说明\n- **数据格式**：**JSON** 结构化,可直接用于健身 App 开发\n- **生态关联**：是 LogPress 健身应用的数据层\n- **适用**：让 AI 基于它做健身小程序/App,省去自己造动作数据",
+        "如何使用": "```bash\n# clone 后直接使用 JSON 数据\ngit clone https://github.com/hasaneyldrm/exercises-dataset\n# 或下载数据文件\n```\n- 提示词示例：「请你基于这个开源项目做一个健身的小程序给我，我自己用不需要数据库。所有 GIF 资源下载到本地，如果有包大小限制，可以采用分包策略。」",
+        "对我的价值": "做健身 / 健康类 App 时直接可用的数据源——不用自己整理动作库。适合 AI 辅助快速搭建健身产品的数据层。值得实践。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n健身动作的结构化数据集——收录 **1324 个动作**,含动画 GIF、缩略图、肌肉群/器械数据和 6 种语言的分步说明,是 LogPress 应用的数据层。\n\n## 内容与亮点\n- **核心能力**：1324 个健身动作,带 `animation GIF`、`180×180` 缩略图、肌肉群与器械数据、6 语言分步说明\n- **数据格式**：**JSON** 结构化,可直接用于健身 App 开发\n- **生态关联**：是 LogPress 健身应用的数据层\n- **适用**：让 AI 基于它做健身小程序/App,省去自己造动作数据\n\n## 如何使用\n```bash\n# clone 后直接使用 JSON 数据\ngit clone https://github.com/hasaneyldrm/exercises-dataset\n# 或下载数据文件\n```\n- 提示词示例：「请你基于这个开源项目做一个健身的小程序给我，我自己用不需要数据库。所有 GIF 资源下载到本地，如果有包大小限制，可以采用分包策略。」\n\n## 对我的价值\n做健身 / 健康类 App 时直接可用的数据源——不用自己整理动作库。适合 AI 辅助快速搭建健身产品的数据层。值得实践。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/database/exercises-dataset.md"
+    },
+    {
+      "name": "pinme",
+      "repo_url": "https://github.com/glitternetwork/pinme",
+      "article_url": [
+        "https://pinme.dev/",
+        "https://pinme.eth.limo"
+      ],
+      "category": "devops",
+      "tags": [
+        "部署",
+        "静态网站",
+        "serverless",
+        "Claude-skill",
+        "IPFS"
+      ],
+      "language": "TypeScript",
+      "stars": 3737,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "「一句话把开发的网站发布到线上」——把本地静态网页、图片或任意文件,快速变成一个谁都能访问的公网链接的部署工具。",
+        "内容与亮点": "- **核心能力**：单命令前端部署（Deploy Your Frontend in a Single Command）,支持 **Claude Code Skill**\n- **零配置**：无需服务器配置,本地文件直接上线\n- **部署方式**：全栈前后端分离架构,后端跑在 **Edge Runtime**,数据库用 **Serverless SQL**,静态资源走 **IPFS** 分布式存储\n- **规模验证**：项目累计已帮用户部署超过 100 万个网站\n- **平台能力**：内置邮件推送和 LLM 调用能力,Worker 中可直接调用",
+        "如何使用": "```bash\n# 安装 Claude Code Skill\nnpx skills add glitternetwork/pinme\n```\n- 之后用一句话让 Claude 把当前项目/文件部署上线\n- 在线体验：https://pinme.dev/",
+        "对我的价值": "快速把 prototype / 静态页 / 小工具部署上线的最佳参照——尤其是「Serverless + IPFS 静态托管」这种低成本方案。开发新项目想快速给别人看效果时,值得实践。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n「一句话把开发的网站发布到线上」——把本地静态网页、图片或任意文件,快速变成一个谁都能访问的公网链接的部署工具。\n\n## 内容与亮点\n- **核心能力**：单命令前端部署（Deploy Your Frontend in a Single Command）,支持 **Claude Code Skill**\n- **零配置**：无需服务器配置,本地文件直接上线\n- **部署方式**：全栈前后端分离架构,后端跑在 **Edge Runtime**,数据库用 **Serverless SQL**,静态资源走 **IPFS** 分布式存储\n- **规模验证**：项目累计已帮用户部署超过 100 万个网站\n- **平台能力**：内置邮件推送和 LLM 调用能力,Worker 中可直接调用\n\n## 如何使用\n```bash\n# 安装 Claude Code Skill\nnpx skills add glitternetwork/pinme\n```\n- 之后用一句话让 Claude 把当前项目/文件部署上线\n- 在线体验：https://pinme.dev/\n\n## 对我的价值\n快速把 prototype / 静态页 / 小工具部署上线的最佳参照——尤其是「Serverless + IPFS 静态托管」这种低成本方案。开发新项目想快速给别人看效果时,值得实践。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/devops/pinme.md"
+    },
+    {
+      "name": "aholo-viewer",
+      "repo_url": "https://github.com/manycoretech/aholo-viewer",
+      "article_url": [
+        "https://aholojs.dev/"
+      ],
+      "category": "tools",
+      "tags": [
+        "3D",
+        "3DGS",
+        "渲染",
+        "WebGL",
+        "TypeScript"
+      ],
+      "language": "TypeScript",
+      "stars": 1008,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "国产高性能浏览器端 **3D 高斯泼溅（3D Gaussian Splatting）** 渲染引擎——在网页里直接渲染 3DGS 场景。",
+        "内容与亮点": "- **核心能力**：高性能 3DGS 渲染器,支持 **LOD（Level of Detail）** 分级加载\n- **技术栈**：TypeScript,跑在浏览器里,无需安装\n- **在线体验**：官网 Playground 可实时试玩（aholojs.dev/zh-CN/playground）\n- **适用**：需要把 3D 实景/扫描场景嵌入网页的场景（如实景漫游、商品展示）",
+        "如何使用": "```bash\n# 参考 README 安装并集成\n# 在线体验: https://aholojs.dev/zh-CN/playground\n```",
+        "对我的价值": "3D 网页渲染的前沿参照——3DGS 是 2025-2026 最热的空间智能方向之一。如果以后做实景 3D 展示、空间数据可视化,这是可直接用的浏览器端方案。值得跟进学习。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n国产高性能浏览器端 **3D 高斯泼溅（3D Gaussian Splatting）** 渲染引擎——在网页里直接渲染 3DGS 场景。\n\n## 内容与亮点\n- **核心能力**：高性能 3DGS 渲染器,支持 **LOD（Level of Detail）** 分级加载\n- **技术栈**：TypeScript,跑在浏览器里,无需安装\n- **在线体验**：官网 Playground 可实时试玩（aholojs.dev/zh-CN/playground）\n- **适用**：需要把 3D 实景/扫描场景嵌入网页的场景（如实景漫游、商品展示）\n\n## 如何使用\n```bash\n# 参考 README 安装并集成\n# 在线体验: https://aholojs.dev/zh-CN/playground\n```\n\n## 对我的价值\n3D 网页渲染的前沿参照——3DGS 是 2025-2026 最热的空间智能方向之一。如果以后做实景 3D 展示、空间数据可视化,这是可直接用的浏览器端方案。值得跟进学习。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/tools/aholo-viewer.md"
+    },
+    {
       "name": "book-to-skill",
       "repo_url": "https://github.com/virgiliojr94/book-to-skill",
       "article_url": [
@@ -206,6 +349,93 @@
       },
       "body": "## 一句话\n把任意技术书 PDF、文档文件夹或资料合集，**提炼成一个结构化 Claude Code Skill**——框架、决策规则、反模式、逐章文件，随用随取，不幻觉。\n\n## 内容与亮点\n- **核心价值**：比把整本书塞进上下文省 **24×–51× token**（实测数据）；问问题时智能体读对应章节，从真实内容作答，不幻觉\n- **三步流程**：指向文件/文件夹/glob → 提炼成 Skill（结构而非摘要）→ 智能体按需加载（`/你的书-slug` 直接问答）\n- **生成产物**：`SKILL.md`（核心心智模型 + 章节索引，~4000 tokens）、`chapters/ch0X-*.md`（每章一份，**按需加载**不计入预算，~1000 tokens 各）、`glossary.md`（术语表）、`patterns.md`（算法/设计模式）、`cheatsheet.md`（决策表）\n- **不止书**：任何结构化文本都行——内部文档/runbook、品牌设计规范等，可把整个 docs/ 折叠进一个 Skill\n- **隐私**：全程本地处理，文件不上传；生成品是合成衍生物，不复制原文段落；MIT 协议\n- **兼容**：开放 Agent Skills 标准，Claude Code / Copilot CLI / Amp 通用\n\n## 如何使用\n```bash\n# 安装：clone 进 Claude Code skills 目录\ngit clone https://github.com/virgiliojr94/book-to-skill.git ~/.claude/skills/book-to-skill\n# (Copilot CLI: ~/.copilot/skills/ · Amp/跨 agent: ~/.agents/skills/)\n\n# 使用：指向文件/文件夹/glob，可选自定义 skill 名\n/book-to-skill ./my-book.pdf [skill-name]\n```\n- 另有 analyze-only（只分析）、generate-from-analysis（复用分析结果）、update/fold-in（增量更新）等模式，见 docs/USAGE.md\n\n## 对我的价值\n买的书读过就忘的痛点正中；可把手头的技术书/资料直接变成随用随取的 Skill，配合本项目参照库做\"书 → 知识资产\"闭环；对用户做投研/技术学习都很实用。\n\n## 实践心得（待实践）\n>",
       "file": "repos/tools/book-to-skill.md"
+    },
+    {
+      "name": "html-anything",
+      "repo_url": "https://github.com/nexu-io/html-anything",
+      "article_url": [
+        "https://open-design.ai/html-anything/"
+      ],
+      "category": "tools",
+      "tags": [
+        "HTML",
+        "AI编辑器",
+        "agent-skill",
+        "vibe-coding",
+        "nextjs"
+      ],
+      "language": "HTML",
+      "stars": 8320,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "「AI 代理时代的 HTML 编辑器」——你的本地 AI Agent 写 HTML,你负责发布。核心理念是「Markdown 是草稿,HTML 才是给人看的最终产物」。",
+        "内容与亮点": "- **核心能力**：本地运行的 HTML 生成器,对接 8 个主流 AI 编程 CLI（**Claude Code** / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider）\n- **75 个 Skill 模板**：覆盖杂志、演示文稿、海报、小红书 / 推文、原型、数据报告、Hyperframes 等 9 种内容表面\n- **沙箱预览**：生成结果在受控环境预览,避免恶意代码\n- **一键导出**：直接发到微信 / X / 知乎,或下载 `.html` / `.png`\n- **零 API Key**：复用你已登录的 AI CLI 会话,不额外收费",
+        "如何使用": "```bash\ngit clone https://github.com/nexu-io/html-anything\ncd html-anything\n# 按 README 安装依赖并启动本地服务\n```\n- 打开浏览器后自动检测已登录的 AI CLI（Claude Code / Cursor / Codex 等）,在 Web 界面左侧粘贴内容（Markdown / CSV / Excel / JSON / 纯文本）,右侧实时预览生成的 HTML,按 ⌘+Enter 生成",
+        "对我的价值": "vibe coding 场景的强力补充——用 AI 生成内容时,输出不是 Markdown 而是可直接发布的 HTML。适合做小红书/公众号图文、原型、数据报告;可作为「AI 生成内容 → 网页发布」管线的参照。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n「AI 代理时代的 HTML 编辑器」——你的本地 AI Agent 写 HTML,你负责发布。核心理念是「Markdown 是草稿,HTML 才是给人看的最终产物」。\n\n## 内容与亮点\n- **核心能力**：本地运行的 HTML 生成器,对接 8 个主流 AI 编程 CLI（**Claude Code** / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider）\n- **75 个 Skill 模板**：覆盖杂志、演示文稿、海报、小红书 / 推文、原型、数据报告、Hyperframes 等 9 种内容表面\n- **沙箱预览**：生成结果在受控环境预览,避免恶意代码\n- **一键导出**：直接发到微信 / X / 知乎,或下载 `.html` / `.png`\n- **零 API Key**：复用你已登录的 AI CLI 会话,不额外收费\n\n## 如何使用\n```bash\ngit clone https://github.com/nexu-io/html-anything\ncd html-anything\n# 按 README 安装依赖并启动本地服务\n```\n- 打开浏览器后自动检测已登录的 AI CLI（Claude Code / Cursor / Codex 等）,在 Web 界面左侧粘贴内容（Markdown / CSV / Excel / JSON / 纯文本）,右侧实时预览生成的 HTML,按 ⌘+Enter 生成\n\n## 对我的价值\nvibe coding 场景的强力补充——用 AI 生成内容时,输出不是 Markdown 而是可直接发布的 HTML。适合做小红书/公众号图文、原型、数据报告;可作为「AI 生成内容 → 网页发布」管线的参照。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/tools/html-anything.md"
+    },
+    {
+      "name": "Recordly",
+      "repo_url": "https://github.com/webadderallorg/Recordly",
+      "article_url": [
+        "https://recordly.dev"
+      ],
+      "category": "tools",
+      "tags": [
+        "录屏",
+        "视频编辑",
+        "Electron",
+        "跨平台",
+        "演示视频"
+      ],
+      "language": "TypeScript",
+      "stars": 21353,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "开源桌面录屏 + 编辑工具——录完之后自动帮你把画面处理好看,无需剪辑技能即可产出精致 demo 视频。",
+        "内容与亮点": "- **核心能力**：录屏后自动美化,**光标变平滑、运动模糊、点击时自动放大关键区域、套上好看的边框和背景**\n- **光标美化**：平滑移动、运动模糊、点击弹跳、摇摆效果,甚至可用 macOS 风格光标素材\n- **摄像头气泡**：把摄像头画面叠在录屏上,支持位置、大小、圆角、阴影自定义\n- **时间线编辑**：拖拽式编辑器,支持裁剪、变速、添加标注、额外音轨\n- **样式化输出**：内置壁纸、渐变背景、圆角、阴影、画面比例预设\n- **扩展市场**：社区驱动的插件系统,可安装点击音效、设备边框、浏览器 mockup 等\n- **导出**：支持 MP4 和 GIF,质量可选;**跨平台**（macOS / Windows / Linux）",
+        "如何使用": "```bash\n# 按 README 安装（Electron 应用）或下载发行版\n# 官网: https://recordly.dev\n```",
+        "对我的价值": "替代 Screen Studio 类付费工具的免费方案。做产品 demo、教学视频、给客户演示时的利器——录完即出片,不用手动剪辑。值得手动实践并记录踩坑。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n开源桌面录屏 + 编辑工具——录完之后自动帮你把画面处理好看,无需剪辑技能即可产出精致 demo 视频。\n\n## 内容与亮点\n- **核心能力**：录屏后自动美化,**光标变平滑、运动模糊、点击时自动放大关键区域、套上好看的边框和背景**\n- **光标美化**：平滑移动、运动模糊、点击弹跳、摇摆效果,甚至可用 macOS 风格光标素材\n- **摄像头气泡**：把摄像头画面叠在录屏上,支持位置、大小、圆角、阴影自定义\n- **时间线编辑**：拖拽式编辑器,支持裁剪、变速、添加标注、额外音轨\n- **样式化输出**：内置壁纸、渐变背景、圆角、阴影、画面比例预设\n- **扩展市场**：社区驱动的插件系统,可安装点击音效、设备边框、浏览器 mockup 等\n- **导出**：支持 MP4 和 GIF,质量可选;**跨平台**（macOS / Windows / Linux）\n\n## 如何使用\n```bash\n# 按 README 安装（Electron 应用）或下载发行版\n# 官网: https://recordly.dev\n```\n\n## 对我的价值\n替代 Screen Studio 类付费工具的免费方案。做产品 demo、教学视频、给客户演示时的利器——录完即出片,不用手动剪辑。值得手动实践并记录踩坑。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/tools/Recordly.md"
+    },
+    {
+      "name": "tax-check",
+      "repo_url": "https://github.com/tomczhang/tax-check",
+      "article_url": [
+        "https://tomczhang.github.io/tax-check/"
+      ],
+      "category": "tools",
+      "tags": [
+        "税务",
+        "资本利得税",
+        "海外投资",
+        "报税",
+        "工具"
+      ],
+      "language": "TypeScript",
+      "stars": 53,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "面向**中国大陆居民**的海外资本利得税计算工具——把海外券商文件整理成个人申报参考底稿,「可以不报,不能不知道」。",
+        "内容与亮点": "- **核心能力**：导入券商材料,整理出个人申报所需的应纳税所得额\n- **识别与整理**：自动识别券商和文件类型,核对逐笔交易、补充历史成本、订正解析结果\n- **计算方法**：对比**自然年 FIFO** 与 **ACB** 两种成本法\n- **覆盖范围**：计算财产转让所得与利息、股息、红利所得\n- **输出**：生成可复制数字和可保存 PDF 的申报参考底稿\n- **背景**：海外券商交易/分红/转仓材料分散在不同报表,个人申报需手动整理成本、汇率、应纳税所得额和海外已纳税额,TaxCheck 自动化这个过程",
+        "如何使用": "- 在线使用：https://tomczhang.github.io/tax-check/\n- 或按 README 本地运行",
+        "对我的价值": "对海外投资（美股/港股）的财务工具直接有用——报税季整理底稿的好帮手。也可作为「金融合规工具」类项目的参照。值得实践并记录。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n面向**中国大陆居民**的海外资本利得税计算工具——把海外券商文件整理成个人申报参考底稿,「可以不报,不能不知道」。\n\n## 内容与亮点\n- **核心能力**：导入券商材料,整理出个人申报所需的应纳税所得额\n- **识别与整理**：自动识别券商和文件类型,核对逐笔交易、补充历史成本、订正解析结果\n- **计算方法**：对比**自然年 FIFO** 与 **ACB** 两种成本法\n- **覆盖范围**：计算财产转让所得与利息、股息、红利所得\n- **输出**：生成可复制数字和可保存 PDF 的申报参考底稿\n- **背景**：海外券商交易/分红/转仓材料分散在不同报表,个人申报需手动整理成本、汇率、应纳税所得额和海外已纳税额,TaxCheck 自动化这个过程\n\n## 如何使用\n- 在线使用：https://tomczhang.github.io/tax-check/\n- 或按 README 本地运行\n\n## 对我的价值\n对海外投资（美股/港股）的财务工具直接有用——报税季整理底稿的好帮手。也可作为「金融合规工具」类项目的参照。值得实践并记录。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/tools/tax-check.md"
     },
     {
       "name": "AI-For-Beginners",
@@ -264,6 +494,36 @@
       },
       "body": "## 一句话\n收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（GitHub 星数最高的仓库之一）。\n\n## 内容与亮点\n- **收录范围**：免费电子书、免费课程、交互式教程、播客、杂志，社区持续维护、零付费墙\n- **组织方式**：按自然语言（50+ 种）与技术主题双重分类，**中文版单独成册**（`free-programming-books-zh_CN`）\n- **核心文件**：`free-programming-books.md`（按语言分组书籍）、`free-courses.md`（免费课程）、交互式教程/播客/游戏子清单\n\n## 如何使用\n- 在线浏览：https://ebookfoundation.github.io/free-programming-books/\n- 本地使用：clone 仓库后全文检索，或直接网页浏览\n\n## 对我的价值\n学新语言/新框架前来查免费资料；技术选型或写文章时引用权威出处；做学习路线时当目录用。\n\n## 实践心得（待实践）\n>",
       "file": "repos/learning/free-programming-books.md"
+    },
+    {
+      "name": "workout-cool",
+      "repo_url": "https://github.com/Snouzy/workout-cool",
+      "article_url": [
+        "https://workout.cool"
+      ],
+      "category": "templates",
+      "tags": [
+        "健身",
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "TailwindCSS",
+        "开源平台"
+      ],
+      "language": "TypeScript",
+      "stars": 8378,
+      "status": "收藏",
+      "date_added": "2026-08-17",
+      "sections": {
+        "__lead__": "",
+        "一句话": "现代开源健身训练平台——可创建训练计划、记录进度,带动作说明和视频演示的健身 Web 应用。",
+        "内容与亮点": "- **核心能力**：创建训练计划、跟踪进度、访问完整动作数据库,含动作说明与视频演示\n- **技术栈**：**Next.js** + **React** + **TypeScript** + **Prisma** + **PostgreSQL** + **TailwindCSS** + **shadcn-ui** + **Radix UI**\n- **架构**：采用 **Feature-Sliced Design**（功能切片）分层,前端 SPA 风格 + 服务端渲染混合\n- **多语言**：支持多语言\n- **规模**：8000+ Star,活跃维护（2026-07 还在更新）",
+        "如何使用": "```bash\ngit clone https://github.com/Snouzy/workout-cool\ncd workout-cool\n# 按 README 配置数据库(PostgreSQL)并启动\nnpm install && npm run dev\n```",
+        "对我的价值": "「现代全栈开源应用」的可跑可抄模板——Next.js + Prisma + Tailwind 的完整实践,含数据库设计、认证、UI 组件组织。做健身类或任何 CRUD + 数据可视化 Web 产品时的高质量参照。值得手动实践。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n现代开源健身训练平台——可创建训练计划、记录进度,带动作说明和视频演示的健身 Web 应用。\n\n## 内容与亮点\n- **核心能力**：创建训练计划、跟踪进度、访问完整动作数据库,含动作说明与视频演示\n- **技术栈**：**Next.js** + **React** + **TypeScript** + **Prisma** + **PostgreSQL** + **TailwindCSS** + **shadcn-ui** + **Radix UI**\n- **架构**：采用 **Feature-Sliced Design**（功能切片）分层,前端 SPA 风格 + 服务端渲染混合\n- **多语言**：支持多语言\n- **规模**：8000+ Star,活跃维护（2026-07 还在更新）\n\n## 如何使用\n```bash\ngit clone https://github.com/Snouzy/workout-cool\ncd workout-cool\n# 按 README 配置数据库(PostgreSQL)并启动\nnpm install && npm run dev\n```\n\n## 对我的价值\n「现代全栈开源应用」的可跑可抄模板——Next.js + Prisma + Tailwind 的完整实践,含数据库设计、认证、UI 组件组织。做健身类或任何 CRUD + 数据可视化 Web 产品时的高质量参照。值得手动实践。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/templates/workout-cool.md"
     }
   ]
 }
