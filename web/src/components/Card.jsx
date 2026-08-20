@@ -2,10 +2,15 @@ import { Link } from 'react-router-dom'
 import { Star } from '@phosphor-icons/react'
 import { LABELS, fmtStars, repoOgUrl } from '../data/categories.js'
 
+const MAX_TAGS = 4
+
 export default function Card({ e }) {
   const summary = (e.sections?.['一句话'] || '').replace(/\n+/g, ' ')
   const stars = fmtStars(e.stars)
   const og = repoOgUrl(e.repo_url)
+  const tags = e.tags || []
+  const visibleTags = tags.slice(0, MAX_TAGS)
+  const extraTags = tags.length - MAX_TAGS
   return (
     <article className="card">
       {og && (
@@ -29,7 +34,8 @@ export default function Card({ e }) {
       </div>
       <p className="card-summary">{summary || '（暂无一句话简介）'}</p>
       <div className="card-tags">
-        {(e.tags || []).map((t) => <span key={t} className="tag">#{t}</span>)}
+        {visibleTags.map((t) => <span key={t} className="tag">#{t}</span>)}
+        {extraTags > 0 && <span className="tag more" title={tags.slice(MAX_TAGS).map((t) => '#' + t).join(' ')}>+{extraTags}</span>}
       </div>
     </article>
   )
