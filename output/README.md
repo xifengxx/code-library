@@ -1,10 +1,10 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **18** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **19** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
-| AI / LLM | 3 |
+| AI / LLM | 4 |
 | 前端 | 5 |
 | 后端 | 0 |
 | 数据库 / 存储 | 1 |
@@ -15,11 +15,12 @@
 | 项目模板 / 示例 | 1 |
 | 其他 | 0 |
 
-## AI / LLM（3）
+## AI / LLM（4）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
 | [adhd](https://github.com/UditAkhourii/adhd) | 给 coding agent 用的「发散思维」Skill——用 **Tree-of-Thought + pruning（ | TypeScript | 3.6k | Agent, 思维发散, Tree-of-Thought, Claude, 创意, TypeScript | 收藏 |
+| [diagram-design](https://github.com/cathrynlavery/diagram-design) | Diagram Design 是一个适配 Claude Code、Codex、Factory Droid、Pi 等 AI | HTML | 28k | Agent-skill, claude-code, codex, 图表, 数据可视化, SVG, 品牌风格 | 收藏 |
 | [langchain](https://github.com/langchain-ai/langchain) | 构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示 | Python | 105k | LLM, Agent, RAG, 框架, Python | 收藏 |
 | [native-feel-skill](https://github.com/yetone/native-feel-skill) | 教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和 | Markdown | 1.9k | Agent-skill, 桌面应用, 跨平台, UI设计, Raycast | 收藏 |
 
