@@ -330,6 +330,17 @@ a:hover { color: var(--accent-hover); }
 }
 .detail-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* 预览图降级占位（图源 429 / 网络失败 / 非 GitHub 地址） */
+.thumb-fallback {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; color: var(--text-quaternary);
+}
+.thumb-fallback span {
+  max-width: 80%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-family: var(--mono); font-size: 12px; letter-spacing: -0.2px;
+}
+.detail-banner.thumb-fallback span { font-size: 14px; }
+
 /* ── 搜索框图标 ───────────────────────── */
 .search-wrap { position: relative; margin-bottom: 18px; }
 .search-wrap .search { margin-bottom: 0; padding-left: 40px; }

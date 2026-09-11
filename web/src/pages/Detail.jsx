@@ -2,7 +2,8 @@ import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ArrowLeft, ArrowUpRight, Star, CalendarBlank } from '@phosphor-icons/react'
-import { LABELS, fmtStars, repoOgUrl } from '../data/categories.js'
+import { LABELS, fmtStars } from '../data/categories.js'
+import RepoThumb from '../components/RepoThumb.jsx'
 
 export default function Detail({ data }) {
   const { name } = useParams()
@@ -23,17 +24,11 @@ export default function Detail({ data }) {
     )
   }
 
-  const og = repoOgUrl(e.repo_url)
-
   return (
     <div className="detail">
       <Link to="/browse" className="back"><ArrowLeft size={14} weight="bold" /> 返回浏览</Link>
       <header className="detail-head">
-        {og && (
-          <div className="detail-banner">
-            <img src={og} alt={e.name} onError={(ev) => { ev.currentTarget.style.display = 'none' }} />
-          </div>
-        )}
+        <RepoThumb repoUrl={e.repo_url} name={e.name} category={e.category} variant="banner" />
         <h1>{e.name}</h1>
         <div className="detail-links">
           {e.repo_url && (

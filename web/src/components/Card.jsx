@@ -1,28 +1,19 @@
 import { Link } from 'react-router-dom'
 import { Star } from '@phosphor-icons/react'
-import { LABELS, fmtStars, repoOgUrl } from '../data/categories.js'
+import { LABELS, fmtStars } from '../data/categories.js'
+import RepoThumb from './RepoThumb.jsx'
 
 const MAX_TAGS = 4
 
 export default function Card({ e }) {
   const summary = (e.sections?.['一句话'] || '').replace(/\n+/g, ' ')
   const stars = fmtStars(e.stars)
-  const og = repoOgUrl(e.repo_url)
   const tags = e.tags || []
   const visibleTags = tags.slice(0, MAX_TAGS)
   const extraTags = tags.length - MAX_TAGS
   return (
     <article className="card">
-      {og && (
-        <div className="card-thumb">
-          <img
-            src={og}
-            alt={e.name}
-            loading="lazy"
-            onError={(ev) => { ev.currentTarget.style.display = 'none' }}
-          />
-        </div>
-      )}
+      <RepoThumb repoUrl={e.repo_url} name={e.name} category={e.category} variant="card" />
       <Link to={`/repo/${encodeURIComponent(e.name)}`} className="card-title">
         <h3>{e.name}</h3>
       </Link>
