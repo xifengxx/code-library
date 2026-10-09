@@ -1,10 +1,10 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **20** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **21** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
-| AI / LLM | 5 |
+| AI / LLM | 6 |
 | 前端 | 5 |
 | 后端 | 0 |
 | 数据库 / 存储 | 1 |
@@ -15,7 +15,7 @@
 | 项目模板 / 示例 | 1 |
 | 其他 | 0 |
 
-## AI / LLM（5）
+## AI / LLM（6）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
@@ -23,6 +23,7 @@
 | [diagram-design](https://github.com/cathrynlavery/diagram-design) | Diagram Design 是一个适配 Claude Code、Codex、GitHub Copilot、Factor | HTML | 46.5k | Agent-skill, claude-code, codex, copilot, 图表, 数据可视化, SVG, 品牌风格, Mermaid, draw.io, Excalidraw | 收藏 |
 | [handraw-style](https://github.com/yang0/handraw-style) | 手绘风格提示词库 / Agent Skill：收录 **001–267 号手绘画风**并配编号画廊，用户只需报「编号 + | HTML | 2.1k | Agent-skill, codex, 提示词, AI绘画, 手绘风格, 风格参考图, 双语提示词 | 收藏 |
 | [langchain](https://github.com/langchain-ai/langchain) | 构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示 | Python | 105k | LLM, Agent, RAG, 框架, Python | 收藏 |
+| [monid](https://github.com/monid-ai/monid) | Monid 自称「agent 工具界的 **OpenRouter**」——用**一个 base URL + 一个 key | TypeScript | 3.1k | AI-agent, 工具网关, API聚合, MCP, Deno, TypeScript, connector, 用量计费, 爬虫, 数据补全 | 研究 |
 | [native-feel-skill](https://github.com/yetone/native-feel-skill) | 教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和 | Markdown | 1.9k | Agent-skill, 桌面应用, 跨平台, UI设计, Raycast | 收藏 |
 
 ## 前端（5）
