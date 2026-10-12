@@ -1,10 +1,10 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **21** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **22** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
-| AI / LLM | 6 |
+| AI / LLM | 7 |
 | 前端 | 5 |
 | 后端 | 0 |
 | 数据库 / 存储 | 1 |
@@ -15,7 +15,7 @@
 | 项目模板 / 示例 | 1 |
 | 其他 | 0 |
 
-## AI / LLM（6）
+## AI / LLM（7）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
@@ -25,6 +25,7 @@
 | [langchain](https://github.com/langchain-ai/langchain) | 构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示 | Python | 105k | LLM, Agent, RAG, 框架, Python | 收藏 |
 | [monid](https://github.com/monid-ai/monid) | Monid 自称「agent 工具界的 **OpenRouter**」——用**一个 base URL + 一个 key | TypeScript | 3.1k | AI-agent, 工具网关, API聚合, MCP, Deno, TypeScript, connector, 用量计费, 爬虫, 数据补全 | 研究 |
 | [native-feel-skill](https://github.com/yetone/native-feel-skill) | 教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和 | Markdown | 1.9k | Agent-skill, 桌面应用, 跨平台, UI设计, Raycast | 收藏 |
+| [UZI-Skill](https://github.com/wbh604/UZI-Skill) | 游资（UZI）Skills 是一个 A股 / 港股 / 美股**个股深度分析引擎**的 Agent Skill：输入一只 | Python | 7.2k | Agent-skill, claude-code, 股票分析, A股, 港股, 美股, 投研, DCF, Python, HTML报告, 多智能体 | 研究 |
 
 ## 前端（5）
 
