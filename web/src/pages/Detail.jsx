@@ -5,6 +5,26 @@ import { ArrowLeft, ArrowUpRight, Star, CalendarBlank } from '@phosphor-icons/re
 import { LABELS, fmtStars } from '../data/categories.js'
 import RepoThumb from '../components/RepoThumb.jsx'
 
+// 链接标签：优先给读者有信息量的名字，而不是「相关文章 N」。
+// 裸域名对 mp.weixin.qq.com / github.com 是无信息量的，单独处理。
+function linkLabel(u) {
+  let host, seg
+  try {
+    const url = new URL(u)
+    host = url.hostname.replace(/^www\./, '')
+    seg = url.pathname.split('/').filter(Boolean)
+  } catch {
+    return '相关链接'
+  }
+  if (host === 'mp.weixin.qq.com') return '微信公众号'
+  if (host === 'github.com' && seg.length >= 2) return seg[1]
+  if (seg.length) {
+    const first = seg[0].length > 16 ? `${seg[0].slice(0, 15)}…` : seg[0]
+    return `${host}/${first}`
+  }
+  return host
+}
+
 export default function Detail({ data }) {
   const { name } = useParams()
   let decoded
@@ -34,8 +54,8 @@ export default function Detail({ data }) {
           {e.repo_url && (
             <a className="btn" href={e.repo_url} target="_blank" rel="noreferrer">GitHub 仓库 <ArrowUpRight size={14} weight="bold" /></a>
           )}
-          {(e.article_url || []).map((u, i) => (
-            <a key={u} className="btn ghost" href={u} target="_blank" rel="noreferrer">相关文章 {i + 1} <ArrowUpRight size={14} weight="bold" /></a>
+          {(e.article_url || []).map((u) => (
+            <a key={u} className="btn ghost" href={u} target="_blank" rel="noreferrer" title={u}>{linkLabel(u)} <ArrowUpRight size={14} weight="bold" /></a>
           ))}
         </div>
         <div className="card-meta">
