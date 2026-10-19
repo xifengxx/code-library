@@ -1,6 +1,6 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **22** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **23** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
@@ -12,7 +12,7 @@
 | 开发工具 / CLI | 5 |
 | 移动端 | 0 |
 | 学习资源 | 2 |
-| 项目模板 / 示例 | 1 |
+| 项目模板 / 示例 | 2 |
 | 其他 | 0 |
 
 ## AI / LLM（7）
@@ -66,8 +66,9 @@
 | [AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners) | 微软官方出品的 **「AI 入门」免费课程**仓库：12 周、24 课，覆盖神经网络、计算机视觉、NLP、生成式 AI， | Jupyter Notebook | 62.5k | ai, machine-learning, deep-learning, 课程, 微软, beginner | 收藏 |
 | [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（Git | HTML | 360k | ebook, 教程, 资源大全, 开源 | 收藏 |
 
-## 项目模板 / 示例（1）
+## 项目模板 / 示例（2）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
+| [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) | TSP 是一个 **A 股智能量化工作台**：自托管、单 Docker 容器、零外部数据库，数据 100% 落在本地 P | Python | 5.8k | 量化交易, A股, 回测, 因子挖掘, FastAPI, Polars, DuckDB, React, MCP, 自托管, 插件化架构, Docker | 研究 |
 | [workout-cool](https://github.com/Snouzy/workout-cool) | 现代开源健身训练平台——可创建训练计划、记录进度,带动作说明和视频演示的健身 Web 应用。 | TypeScript | 8.4k | 健身, Next.js, TypeScript, Prisma, TailwindCSS, 开源平台 | 收藏 |
