@@ -1,17 +1,17 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **23** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **28** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
 | AI / LLM | 7 |
-| 前端 | 5 |
+| 前端 | 6 |
 | 后端 | 0 |
 | 数据库 / 存储 | 1 |
 | DevOps / 云 | 1 |
 | 开发工具 / CLI | 5 |
-| 移动端 | 0 |
-| 学习资源 | 2 |
+| 移动端 | 3 |
+| 学习资源 | 3 |
 | 项目模板 / 示例 | 2 |
 | 其他 | 0 |
 
@@ -27,10 +27,11 @@
 | [native-feel-skill](https://github.com/yetone/native-feel-skill) | 教 Agent 如何设计「有原生感」的跨平台桌面应用的 Skill——蒸馏自 **Raycast 2.0** 深度拆解和 | Markdown | 1.9k | Agent-skill, 桌面应用, 跨平台, UI设计, Raycast | 收藏 |
 | [UZI-Skill](https://github.com/wbh604/UZI-Skill) | 游资（UZI）Skills 是一个 A股 / 港股 / 美股**个股深度分析引擎**的 Agent Skill：输入一只 | Python | 7.2k | Agent-skill, claude-code, 股票分析, A股, 港股, 美股, 投研, DCF, Python, HTML报告, 多智能体 | 研究 |
 
-## 前端（5）
+## 前端（6）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
+| [cult-ui](https://github.com/nolly-studio/cult-ui) | 给 **shadcn/ui** 补上「动起来的那一半」：**150+ 个免费动画组件**（弹窗、卡片、Dock、动态岛、 | TypeScript | 6.8k | React, shadcn, Tailwind, Motion, 组件库, 动画, TypeScript, Nextjs, Agent, MCP | 收藏 |
 | [hallmark](https://github.com/Nutlope/hallmark) | 一个给 Claude Code / Cursor / Codex 的设计 Skill，专门**拒绝看起来像 AI 生成的 | CSS | 21.9k | agent-skill, design, anti-slop, css, claude-code | 收藏 |
 | [img2threejs](https://github.com/img2threejs/img2threejs) | 给一张参考图（耳机 / 机械 / 建筑 / 道具），自动重建为**可动画、可改代码的纯代码 Three.js 模型**— | Python | 9.8k | threejs, webgl, image-to-3d, procedural-generation, claude-code, ai-agents | 收藏 |
 | [impeccable](https://github.com/pbakaus/impeccable) | 给 AI 编程智能体的**设计规范系统**：1 个 Skill、23 条命令、59 条确定性检测规则，消除 AI 生成前 | JavaScript | 55.5k | agent-skill, design-system, ui, claude-code, a11y | 收藏 |
@@ -59,11 +60,20 @@
 | [Recordly](https://github.com/webadderallorg/Recordly) | 开源桌面录屏 + 编辑工具——录完之后自动帮你把画面处理好看,无需剪辑技能即可产出精致 demo 视频。 | TypeScript | 21.4k | 录屏, 视频编辑, Electron, 跨平台, 演示视频 | 收藏 |
 | [tax-check](https://github.com/tomczhang/tax-check) | 面向**中国大陆居民**的海外资本利得税计算工具——把海外券商文件整理成个人申报参考底稿,「可以不报,不能不知道」。 | TypeScript | 53 | 税务, 资本利得税, 海外投资, 报税, 工具 | 收藏 |
 
-## 学习资源（2）
+## 移动端（3）
+
+| 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
+|---|---|---|---|---|---|
+| [aerial-tv](https://github.com/pengchujin/aerial-tv) | 给国产电视换一块**干净的 tvOS 风格桌面**：没有广告和推荐流，只有 App、壁纸和航拍屏保；通过 ADB 安装、 | Kotlin | 5.1k | AndroidTV, 电视桌面, Kotlin, tvOS, 无广告, ADB, Agent, 开源 | 收藏 |
+| [cleanyourtv](https://github.com/Gathin23/cleanyourtv) | 用 **Wi-Fi + ADB** 给 Android TV / Google TV **去广告、禁预装**，再换上一个 | Java | 35.4k | AndroidTV, GoogleTV, debloat, ADB, ClaudeCode, vibe-coding, Launcher, 隐私 | 收藏 |
+| [TVAPP](https://github.com/youhunwl/TVAPP) | **Android TV / 电视盒子应用合集**：把全网影视、直播、K歌、游戏、教育、工具类 APK 整理成一张 RE | JavaScript | 25.8k | AndroidTV, 电视盒子, APK, TVBox, IPTV, 直播源, 影视, 资源整理 | 收藏 |
+
+## 学习资源（3）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
 | [AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners) | 微软官方出品的 **「AI 入门」免费课程**仓库：12 周、24 课，覆盖神经网络、计算机视觉、NLP、生成式 AI， | Jupyter Notebook | 62.5k | ai, machine-learning, deep-learning, 课程, 微软, beginner | 收藏 |
+| [ebook-treasure-chest](https://github.com/jbiaojerry/ebook-treasure-chest) | 一个**电子书下载链接宝库**：把帆书（原樊登读书）、微信读书、京东读书、喜马拉雅等平台的热门书整理成 1000 个标签 | Python | 21.5k | 电子书, 资源大全, epub, mobi, azw3, 网盘下载, 静态搜索页, Python | 收藏 |
 | [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 收录数万条**免费编程书籍、课程、教程**链接的巨型清单，按语言和技术主题双重组织，堪称编程学习资源界的维基百科（Git | HTML | 360k | ebook, 教程, 资源大全, 开源 | 收藏 |
 
 ## 项目模板 / 示例（2）

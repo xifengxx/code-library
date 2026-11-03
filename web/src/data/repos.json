@@ -225,6 +225,42 @@
       "file": "repos/ai-llm/UZI-Skill.md"
     },
     {
+      "name": "cult-ui",
+      "repo_url": "https://github.com/nolly-studio/cult-ui",
+      "article_url": [
+        "https://www.cult-ui.com",
+        "https://www.cult-ui.com/docs",
+        "https://www.cult-ui.com/llms.txt"
+      ],
+      "category": "frontend",
+      "tags": [
+        "React",
+        "shadcn",
+        "Tailwind",
+        "Motion",
+        "组件库",
+        "动画",
+        "TypeScript",
+        "Nextjs",
+        "Agent",
+        "MCP"
+      ],
+      "language": "TypeScript",
+      "stars": 6843,
+      "status": "收藏",
+      "date_added": "2026-10-29",
+      "sections": {
+        "__lead__": "",
+        "一句话": "给 **shadcn/ui** 补上「动起来的那一半」：**150+ 个免费动画组件**（弹窗、卡片、Dock、动态岛、3D 地球、看板、Mac 截图框、玻璃拟态……），全部以 **shadcn registry** 形式分发，`npx shadcn add` 一条命令把源码拷进你的项目；文档同时为人和 coding agent 写，MIT 永久免费。",
+        "内容与亮点": "- **定位**：不是又一套完整组件库，而是**「Shadcn, expanded」**——你已有 shadcn 的基础组件，cult-ui 提供它缺的动画化交互组件；组件用 **Tailwind CSS v4 + shadcn 主题 token**，动效主流用 **Motion**（原 Framer Motion），能无缝继承你的主题色和暗色模式\n- **分发方式即卖点**：每个组件是一个 registry item，CLI **复制源码而非装依赖**，所以代码归你所有、可随意改；支持两种装法——直接给 URL，或一次注册命名空间后按名字装\n- **组件覆盖广**：交互（**dynamic island**、dock、popover 变体）、卡片（shift card、folded card）、插画与设备壳（**mac screen**、fluted glass）、数据可视化（**analytics chart**、**globe**）、应用级（**kanban board**）；2026-10 一次性加了 58 个\n- **Agent-first 文档**（这套做法最值得抄）：`llms.txt` 索引全部页面、`llms-full.txt` 整个文档站打包成单文件、**任意 docs URL 加 `.md` 后缀**即得干净 Markdown；再接上 **shadcn MCP server**，Cursor / Claude Code / VS Code 可以直接在对话里检索并安装组件\n- **仓库自身也在吃这套**：`apps/www` 下同时有 `AGENTS.md` 和 `CLAUDE.md`，根目录还有 `.agents/skills`、`.claude/skills`、`.cursor`——**同一份 skill 喂多个 agent**\n- **工程结构**：**pnpm workspace + Turborepo** 单仓，只有一个 workspace `apps/www`（没有独立 `packages/`），文档站是 **Next.js + Fumadocs** + MDX，组件源码走 `registry.json` / `__registry__` 注册，`vitest` 做测试\n- **商业模式**：组件免费（MIT），收入来自同工作室的 **AI SDK Agents**（100+ Vercel AI SDK agent 模板）和 Nolly Studio 的服务生意——**开源库当流量入口**，README 里明说「你这套库是 AI SDK Agents 养着的」",
+        "如何使用": "**方式一：按 URL 直接装（不用配置）**\n```bash\nnpx shadcn@latest init      # 项目里还没有 shadcn 时先初始化\nnpx shadcn@latest add https://www.cult-ui.com/r/shift-card.json\n```\n\n**方式二：注册命名空间后按名字装（推荐，长期用）**\n```json\n{\n  \"registries\": {\n    \"@cult-ui\": \"https://www.cult-ui.com/r/{name}.json\"\n  }\n}\n```\n写进 `components.json` 后：\n```bash\nnpx shadcn@latest add @cult-ui/shift-card\n```\n\n**方式三：让 Agent 装**——先把 `https://www.cult-ui.com/llms.txt` 或 `https://www.cult-ui.com/docs/mcp-server` 喂给 agent，或启用 shadcn MCP server，然后用自然语言让它挑组件并安装。\n\n**依赖与前提**：React + **Tailwind CSS v4**（v3 老项目需要先升级或手动适配 token）、shadcn/ui 已初始化；每个组件的 docs 页单独列出自身依赖（多数是 `motion`，少数涉及 three.js / recharts 等）。",
+        "对我的价值": "**做前端 demo、投研看板、个人站时，这是「视觉效果立刻上一个档次」的最短路径。** 自己做动效成本很高（Motion 的物理参数、暗色适配、可访问性都要调），cult-ui 直接给能跑的源码，还能按项目主题改。RWA / Crypto 的路演页面、数据看板、产品落地页用动态岛、地球、analytics chart 这些能明显拉高质感。\n\n**第二层价值是「Agent 友好的文档设计」范本**，和库里已收的 aerial-tv、cleanyourtv 是同一脉络：\n- `llms.txt` + `llms-full.txt` + `.md` 后缀三件套，几乎是现在文档站的标准动作，自己的项目该照做\n- 把组件 registry 接到 shadcn MCP server，让 agent「检索 + 安装」闭环——**分发渠道本身就是 agent**\n- 仓库里 `.claude/skills`、`.agents/skills`、`.cursor` 并存，说明多 agent 共用一套 skill 已成常规做法\n\n**注意**：\n- 150+ 组件的**质量与维护深度不齐**，新加的 58 个是批量产出，用前先看 demo 和 issue\n- 依赖 Tailwind v4，老项目迁移有成本；组件是「复制进项目」，**升级要手动重新拉**，不是 `npm update` 能解决的\n- 作者是商业工作室，README 里 AI SDK Agents 的推广位很重，属正常但需留意「免费」的边界\n- MIT 可商用，但组件里的插画 / 素材授权另算，商用前逐个确认",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n给 **shadcn/ui** 补上「动起来的那一半」：**150+ 个免费动画组件**（弹窗、卡片、Dock、动态岛、3D 地球、看板、Mac 截图框、玻璃拟态……），全部以 **shadcn registry** 形式分发，`npx shadcn add` 一条命令把源码拷进你的项目；文档同时为人和 coding agent 写，MIT 永久免费。\n\n## 内容与亮点\n- **定位**：不是又一套完整组件库，而是**「Shadcn, expanded」**——你已有 shadcn 的基础组件，cult-ui 提供它缺的动画化交互组件；组件用 **Tailwind CSS v4 + shadcn 主题 token**，动效主流用 **Motion**（原 Framer Motion），能无缝继承你的主题色和暗色模式\n- **分发方式即卖点**：每个组件是一个 registry item，CLI **复制源码而非装依赖**，所以代码归你所有、可随意改；支持两种装法——直接给 URL，或一次注册命名空间后按名字装\n- **组件覆盖广**：交互（**dynamic island**、dock、popover 变体）、卡片（shift card、folded card）、插画与设备壳（**mac screen**、fluted glass）、数据可视化（**analytics chart**、**globe**）、应用级（**kanban board**）；2026-10 一次性加了 58 个\n- **Agent-first 文档**（这套做法最值得抄）：`llms.txt` 索引全部页面、`llms-full.txt` 整个文档站打包成单文件、**任意 docs URL 加 `.md` 后缀**即得干净 Markdown；再接上 **shadcn MCP server**，Cursor / Claude Code / VS Code 可以直接在对话里检索并安装组件\n- **仓库自身也在吃这套**：`apps/www` 下同时有 `AGENTS.md` 和 `CLAUDE.md`，根目录还有 `.agents/skills`、`.claude/skills`、`.cursor`——**同一份 skill 喂多个 agent**\n- **工程结构**：**pnpm workspace + Turborepo** 单仓，只有一个 workspace `apps/www`（没有独立 `packages/`），文档站是 **Next.js + Fumadocs** + MDX，组件源码走 `registry.json` / `__registry__` 注册，`vitest` 做测试\n- **商业模式**：组件免费（MIT），收入来自同工作室的 **AI SDK Agents**（100+ Vercel AI SDK agent 模板）和 Nolly Studio 的服务生意——**开源库当流量入口**，README 里明说「你这套库是 AI SDK Agents 养着的」\n\n## 如何使用\n**方式一：按 URL 直接装（不用配置）**\n```bash\nnpx shadcn@latest init      # 项目里还没有 shadcn 时先初始化\nnpx shadcn@latest add https://www.cult-ui.com/r/shift-card.json\n```\n\n**方式二：注册命名空间后按名字装（推荐，长期用）**\n```json\n{\n  \"registries\": {\n    \"@cult-ui\": \"https://www.cult-ui.com/r/{name}.json\"\n  }\n}\n```\n写进 `components.json` 后：\n```bash\nnpx shadcn@latest add @cult-ui/shift-card\n```\n\n**方式三：让 Agent 装**——先把 `https://www.cult-ui.com/llms.txt` 或 `https://www.cult-ui.com/docs/mcp-server` 喂给 agent，或启用 shadcn MCP server，然后用自然语言让它挑组件并安装。\n\n**依赖与前提**：React + **Tailwind CSS v4**（v3 老项目需要先升级或手动适配 token）、shadcn/ui 已初始化；每个组件的 docs 页单独列出自身依赖（多数是 `motion`，少数涉及 three.js / recharts 等）。\n\n## 对我的价值\n**做前端 demo、投研看板、个人站时，这是「视觉效果立刻上一个档次」的最短路径。** 自己做动效成本很高（Motion 的物理参数、暗色适配、可访问性都要调），cult-ui 直接给能跑的源码，还能按项目主题改。RWA / Crypto 的路演页面、数据看板、产品落地页用动态岛、地球、analytics chart 这些能明显拉高质感。\n\n**第二层价值是「Agent 友好的文档设计」范本**，和库里已收的 aerial-tv、cleanyourtv 是同一脉络：\n- `llms.txt` + `llms-full.txt` + `.md` 后缀三件套，几乎是现在文档站的标准动作，自己的项目该照做\n- 把组件 registry 接到 shadcn MCP server，让 agent「检索 + 安装」闭环——**分发渠道本身就是 agent**\n- 仓库里 `.claude/skills`、`.agents/skills`、`.cursor` 并存，说明多 agent 共用一套 skill 已成常规做法\n\n**注意**：\n- 150+ 组件的**质量与维护深度不齐**，新加的 58 个是批量产出，用前先看 demo 和 issue\n- 依赖 Tailwind v4，老项目迁移有成本；组件是「复制进项目」，**升级要手动重新拉**，不是 `npm update` 能解决的\n- 作者是商业工作室，README 里 AI SDK Agents 的推广位很重，属正常但需留意「免费」的边界\n- MIT 可商用，但组件里的插画 / 素材授权另算，商用前逐个确认\n\n## 实践心得（待实践）\n>",
+      "file": "repos/frontend/cult-ui.md"
+    },
+    {
       "name": "hallmark",
       "repo_url": "https://github.com/Nutlope/hallmark",
       "article_url": [
@@ -574,6 +610,104 @@
       "file": "repos/tools/tax-check.md"
     },
     {
+      "name": "aerial-tv",
+      "repo_url": "https://github.com/pengchujin/aerial-tv",
+      "article_url": [
+        "https://aerial.qust.me",
+        "https://aerial.qust.me/agent.md"
+      ],
+      "category": "mobile",
+      "tags": [
+        "AndroidTV",
+        "电视桌面",
+        "Kotlin",
+        "tvOS",
+        "无广告",
+        "ADB",
+        "Agent",
+        "开源"
+      ],
+      "language": "Kotlin",
+      "stars": 5058,
+      "status": "收藏",
+      "date_added": "2026-10-26",
+      "sections": {
+        "__lead__": "",
+        "一句话": "给国产电视换一块**干净的 tvOS 风格桌面**：没有广告和推荐流，只有 App、壁纸和航拍屏保；通过 ADB 安装、不 root、不动系统应用、可一键还原，**安装步骤专门写成了让 AI Agent 代跑的说明**。",
+        "内容与亮点": "- **桌面设计**：常用 App 放在屏幕下方**玻璃底板**，往下是全部 App 网格；长按 OK 可移动 / 建文件夹 / 隐藏 / 卸载；HDMI 信号源可自定义成 Apple TV、PS、Switch、Xbox 图标\n- **手机远程整理**：扫电视上的二维码，手机上出现同样的图标网格，可拖动排序、改名、换图标，也能把 HDMI 加进主屏\n- **控制中心 + 屏保 + 壁纸**：信号源 / 网络 / 设置 / 音量 / 亮度 / 个性化；屏保收录 **Apple TV 的 114 段航拍影片**（支持 4K / 杜比视界），也可换照片、时钟或本地视频；壁纸支持必应每日精选、内置 14 张、手机传图\n- **接管机制（最硬核的部分）**：国产电视只认自家桌面且待机清后台，Aerial 用**无障碍服务**检测前台窗口、原桌面一出现就切回来（不读屏幕内容），被清理后靠**通知监听**复活（不读通知）；老小米 Android 6 改看系统用量统计；原生 Android TV 可直接设默认桌面\n- **Agent-first 安装**：把一段 prompt 发给 Claude Code / Codex / Gemini CLI / 豆包电脑版等，按 `agent.md` 自己跑 adb 命令并**用三条验收命令的输出自证装好**\n- **机型适配矩阵**：小米 / TCL / 雷鸟 / 索尼 / 创维 / 康佳 / 海信 / 极米 / 各种盒子和投影按 ✅⚠️❌ 标注，每台有独立笔记（`docs/devices/`），来源是用户反馈\n- **工程规格**：Kotlin，JDK 17 + Android SDK 36，产物分 **standard / guard** 两个 APK，MIT 许可",
+        "如何使用": "**让 Agent 装（作者推荐）**——把这段发给能在电脑上执行命令的 Agent：\n```text\n请帮我把开源电视桌面 Aerial 装到我的电视上，并设为开机进入的桌面。\n电视 IP：<电视IP>\n保持 ADB 常开：要\n安装说明在这里：https://aerial.qust.me/agent.md\n请先完整读完安装说明再动手，然后在我的电脑上亲自运行命令。\n最后把验收命令的原始输出贴给我。\n```\n\n**一行命令（macOS / Linux）**：\n```bash\ncurl -fsSL https://aerial.qust.me/install.sh | KEEP_ADB=1 TV=192.168.1.20 bash\n```\n\n**手动 adb**：\n```bash\nadb connect 192.168.1.20:5555\nadb install -r aerial-standard.apk\nadb shell pm grant app.orchard.tv android.permission.WRITE_SECURE_SETTINGS\nadb shell cmd notification allow_listener app.orchard.tv/app.orchard.tv.guard.RevivalListener\nadb shell appops set app.orchard.tv SYSTEM_ALERT_WINDOW allow\nadb shell am start -n app.orchard.tv/.MainActivity\n```\n\n**还原**：\n```bash\ncurl -fsSL https://aerial.qust.me/install.sh | TV=192.168.1.20 bash -s restore\n```\n前提：电脑与电视同一局域网，电视开启 ADB 调试（README 给了小米 / TCL / 海尔 / OPPO 的分品牌开法）。LG webOS、三星 Tizen、鸿蒙**不支持**；开机广告由固件播放，去不掉。",
+        "对我的价值": "**直接可用**——如果家里是小米 / TCL 这类国产电视，这是目前少有的「无 root、可还原、有真实机型反馈」的换桌面方案。\n\n更值得研究的是它的**分发方式**：把安装文档写成 `agent.md`，内置验收命令，让 coding agent 代替人执行跨设备操作，并给出可核验的输出（`mCurrentFocus` 里有没有 `app.orchard.tv`）。这是「**软件以 Agent 为用户**」的一个干净样本——不是给 Agent 做插件，而是把「人类照文档点来点去」改成「Agent 读文档跑命令，人只负责确认」。做 vibe coding 或 Agent 工具时可以直接借鉴这套「说明 + 自检 + 可回滚」的结构。\n\n另外，它对国产电视固件差异的处理（无障碍窗口检测 → 通知监听复活 → 用量统计兜底）是 Android 兼容性工程的实用案例。\n\n**注意**：项目 2026-10 才发布，非常新；ADB 常开等于在局域网里留了一个调试入口，装完如果不需要升级可以用 `KEEP_ADB=0`。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n给国产电视换一块**干净的 tvOS 风格桌面**：没有广告和推荐流，只有 App、壁纸和航拍屏保；通过 ADB 安装、不 root、不动系统应用、可一键还原，**安装步骤专门写成了让 AI Agent 代跑的说明**。\n\n## 内容与亮点\n- **桌面设计**：常用 App 放在屏幕下方**玻璃底板**，往下是全部 App 网格；长按 OK 可移动 / 建文件夹 / 隐藏 / 卸载；HDMI 信号源可自定义成 Apple TV、PS、Switch、Xbox 图标\n- **手机远程整理**：扫电视上的二维码，手机上出现同样的图标网格，可拖动排序、改名、换图标，也能把 HDMI 加进主屏\n- **控制中心 + 屏保 + 壁纸**：信号源 / 网络 / 设置 / 音量 / 亮度 / 个性化；屏保收录 **Apple TV 的 114 段航拍影片**（支持 4K / 杜比视界），也可换照片、时钟或本地视频；壁纸支持必应每日精选、内置 14 张、手机传图\n- **接管机制（最硬核的部分）**：国产电视只认自家桌面且待机清后台，Aerial 用**无障碍服务**检测前台窗口、原桌面一出现就切回来（不读屏幕内容），被清理后靠**通知监听**复活（不读通知）；老小米 Android 6 改看系统用量统计；原生 Android TV 可直接设默认桌面\n- **Agent-first 安装**：把一段 prompt 发给 Claude Code / Codex / Gemini CLI / 豆包电脑版等，按 `agent.md` 自己跑 adb 命令并**用三条验收命令的输出自证装好**\n- **机型适配矩阵**：小米 / TCL / 雷鸟 / 索尼 / 创维 / 康佳 / 海信 / 极米 / 各种盒子和投影按 ✅⚠️❌ 标注，每台有独立笔记（`docs/devices/`），来源是用户反馈\n- **工程规格**：Kotlin，JDK 17 + Android SDK 36，产物分 **standard / guard** 两个 APK，MIT 许可\n\n## 如何使用\n**让 Agent 装（作者推荐）**——把这段发给能在电脑上执行命令的 Agent：\n```text\n请帮我把开源电视桌面 Aerial 装到我的电视上，并设为开机进入的桌面。\n电视 IP：<电视IP>\n保持 ADB 常开：要\n安装说明在这里：https://aerial.qust.me/agent.md\n请先完整读完安装说明再动手，然后在我的电脑上亲自运行命令。\n最后把验收命令的原始输出贴给我。\n```\n\n**一行命令（macOS / Linux）**：\n```bash\ncurl -fsSL https://aerial.qust.me/install.sh | KEEP_ADB=1 TV=192.168.1.20 bash\n```\n\n**手动 adb**：\n```bash\nadb connect 192.168.1.20:5555\nadb install -r aerial-standard.apk\nadb shell pm grant app.orchard.tv android.permission.WRITE_SECURE_SETTINGS\nadb shell cmd notification allow_listener app.orchard.tv/app.orchard.tv.guard.RevivalListener\nadb shell appops set app.orchard.tv SYSTEM_ALERT_WINDOW allow\nadb shell am start -n app.orchard.tv/.MainActivity\n```\n\n**还原**：\n```bash\ncurl -fsSL https://aerial.qust.me/install.sh | TV=192.168.1.20 bash -s restore\n```\n前提：电脑与电视同一局域网，电视开启 ADB 调试（README 给了小米 / TCL / 海尔 / OPPO 的分品牌开法）。LG webOS、三星 Tizen、鸿蒙**不支持**；开机广告由固件播放，去不掉。\n\n## 对我的价值\n**直接可用**——如果家里是小米 / TCL 这类国产电视，这是目前少有的「无 root、可还原、有真实机型反馈」的换桌面方案。\n\n更值得研究的是它的**分发方式**：把安装文档写成 `agent.md`，内置验收命令，让 coding agent 代替人执行跨设备操作，并给出可核验的输出（`mCurrentFocus` 里有没有 `app.orchard.tv`）。这是「**软件以 Agent 为用户**」的一个干净样本——不是给 Agent 做插件，而是把「人类照文档点来点去」改成「Agent 读文档跑命令，人只负责确认」。做 vibe coding 或 Agent 工具时可以直接借鉴这套「说明 + 自检 + 可回滚」的结构。\n\n另外，它对国产电视固件差异的处理（无障碍窗口检测 → 通知监听复活 → 用量统计兜底）是 Android 兼容性工程的实用案例。\n\n**注意**：项目 2026-10 才发布，非常新；ADB 常开等于在局域网里留了一个调试入口，装完如果不需要升级可以用 `KEEP_ADB=0`。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/mobile/aerial-tv.md"
+    },
+    {
+      "name": "cleanyourtv",
+      "repo_url": "https://github.com/Gathin23/cleanyourtv",
+      "article_url": [
+        "https://cleanyour.tv",
+        "https://x.com/gathint/status/2111379569030939102"
+      ],
+      "category": "mobile",
+      "tags": [
+        "AndroidTV",
+        "GoogleTV",
+        "debloat",
+        "ADB",
+        "ClaudeCode",
+        "vibe-coding",
+        "Launcher",
+        "隐私"
+      ],
+      "language": "Java",
+      "stars": 35356,
+      "status": "收藏",
+      "date_added": "2026-10-26",
+      "sections": {
+        "__lead__": "",
+        "一句话": "用 **Wi-Fi + ADB** 给 Android TV / Google TV **去广告、禁预装**，再换上一个 Apple TV 风格的极简桌面；整个流程被设计成**由 Claude Code 等 coding agent 照着 `PROMPT.md` 执行**——作者 2026-10-17 发的一条「用 Claude Code 清理父母电视」的推文拿到 740 万浏览，仓库 9 天冲到 3.5 万星。",
+        "内容与亮点": "- **三步式去臃肿**：① 备份已安装包与设置 → ② `pm disable-user` 禁用厂商遥测、广告服务、推荐流和预装（**不卸载**，还原脚本可逐步撤销）→ ③ 安装自研 launcher 并设为默认桌面\n- **Agent 原生流程**：克隆仓库后把 `PROMPT.md` 交给 coding assistant，它会**复用仓库里的 `tools/disable.sh` 和 `launcher/build-and-install.sh`**（备份、Home 守护、还原记录都在里面），边做边用电视截图验收，约 15 分钟\n- **传播路径本身就是案例**：推文爆火 → 回复里的机型清单变成 `examples/` → 4 天 200+ 贡献者、170+ 机型；原仓库名 `tv-vibehack`；被 TechCrunch、TechRadar、XDA 等 196 篇文章报道\n- **Launcher 设计**：dock + top shelf + 应用网格 + 单块玻璃高光 + 三个磨砂按钮（信号源 / 网络 / 设置）+ 时钟屏保；**主题与模块卡**可热切换（`tools/theme.sh` 推送，无需重编）；整包约 520KB\n- **机型数据驱动**：`examples/<机型>/tv.json` 一台一档，`tools/gen_tables.py` 自动生成 README 的机型总表——**数据与文档分离**，贡献者只改 JSON\n- **覆盖范围**：Android TV / Google TV 全流程可用；**Fire TV 只能去臃肿**（Fire OS 不让第三方接管 Home）；部分中国区 TCL 拒绝安装任何第三方 launcher；Samsung Tizen / LG webOS 不适用\n- **许可**：MIT（GitHub 识别为 `NOASSERTION`，因为 LICENSE 后面附了字体授权，实际是标准 MIT）\n- **无电脑方案**：社区 App（cleanyour.tv/app）可只靠手机完成连接、分析、清理",
+        "如何使用": "1. **电视端**：设置 → 设备偏好 → 关于 → 连按 **Build** 7 次 → 开发者选项 → 打开 **USB 调试**（若有 Network / ADB debugging 也打开），保持电视开机\n2. **电脑端**（与电视同一 Wi-Fi）：\n```bash\ngit clone https://github.com/Gathin23/cleanyourtv\ncd cleanyourtv\n```\n把仓库目录交给 Claude Code / Codex / Gemini CLI，粘贴 `PROMPT.md` 并填入电视型号，按提示回答清单（用哪些 App、dock 放几个、是否保留语音助手 / Chromecast / 系统更新）\n3. **电视上确认**：「允许 USB 调试？」，之后 agent 会备份、禁用、编译安装 launcher，并用截图逐步验收\n\n**还原**：仓库带还原脚本（安装时生成了记录），按 `tools/` 里的 restore 流程逐项恢复；因为全程用 `disable-user` 而非卸载，理论上可逆。",
+        "对我的价值": "**双重价值，且第二层比第一层重要。**\n\n第一层是实用：家里 Android TV / Google TV 的广告和预装确实烦，这套「备份 → 禁用不卸载 → 换桌面」的路径风险低、可回滚，比 root 或刷机务实得多。\n\n第二层是**这是我见过最干净的「把人类操作手册交给 Agent」的样本**：\n- `PROMPT.md` 不是自然语言教程，而是**给 agent 的任务书**，明确复用仓库内的脚本，避免 agent 即兴写命令\n- 每步有**截图验收**和**可回滚记录**，把「agent 操作实体设备」的风险控制住了\n- 机型知识以 `examples/*/tv.json` 沉淀，README 由脚本生成——**社区贡献的是数据，不是文档**\n它和同期的 `aerial-tv` 指向同一个趋势：**软件开始按「Agent 是执行者、人是审批者」来设计**。做 Agent 工具、写 skill 或自动化 SOP 时，这套结构（任务书 + 固定脚本 + 验收证据 + 数据化知识）可以直接抄。\n\n**必须注意**：\n- 项目**只有 9 天**、3.5 万星、239 个 open issue，脚本仍在快速演进，别把它当稳定产品\n- 在实体电视上跑 `pm disable-user` 前，先读 `tools/disable.sh` 和 `PROMPT.md`，确认没有禁用你要用的组件（尤其国产电视的语音、投屏、系统更新）\n- 中国区电视的系统组件命名与海外差异大，务必对照 `examples/` 里同品牌机型，不要照搬海外清单\n- ADB 调试等于局域网内开放调试入口，用完后建议关掉",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n用 **Wi-Fi + ADB** 给 Android TV / Google TV **去广告、禁预装**，再换上一个 Apple TV 风格的极简桌面；整个流程被设计成**由 Claude Code 等 coding agent 照着 `PROMPT.md` 执行**——作者 2026-10-17 发的一条「用 Claude Code 清理父母电视」的推文拿到 740 万浏览，仓库 9 天冲到 3.5 万星。\n\n## 内容与亮点\n- **三步式去臃肿**：① 备份已安装包与设置 → ② `pm disable-user` 禁用厂商遥测、广告服务、推荐流和预装（**不卸载**，还原脚本可逐步撤销）→ ③ 安装自研 launcher 并设为默认桌面\n- **Agent 原生流程**：克隆仓库后把 `PROMPT.md` 交给 coding assistant，它会**复用仓库里的 `tools/disable.sh` 和 `launcher/build-and-install.sh`**（备份、Home 守护、还原记录都在里面），边做边用电视截图验收，约 15 分钟\n- **传播路径本身就是案例**：推文爆火 → 回复里的机型清单变成 `examples/` → 4 天 200+ 贡献者、170+ 机型；原仓库名 `tv-vibehack`；被 TechCrunch、TechRadar、XDA 等 196 篇文章报道\n- **Launcher 设计**：dock + top shelf + 应用网格 + 单块玻璃高光 + 三个磨砂按钮（信号源 / 网络 / 设置）+ 时钟屏保；**主题与模块卡**可热切换（`tools/theme.sh` 推送，无需重编）；整包约 520KB\n- **机型数据驱动**：`examples/<机型>/tv.json` 一台一档，`tools/gen_tables.py` 自动生成 README 的机型总表——**数据与文档分离**，贡献者只改 JSON\n- **覆盖范围**：Android TV / Google TV 全流程可用；**Fire TV 只能去臃肿**（Fire OS 不让第三方接管 Home）；部分中国区 TCL 拒绝安装任何第三方 launcher；Samsung Tizen / LG webOS 不适用\n- **许可**：MIT（GitHub 识别为 `NOASSERTION`，因为 LICENSE 后面附了字体授权，实际是标准 MIT）\n- **无电脑方案**：社区 App（cleanyour.tv/app）可只靠手机完成连接、分析、清理\n\n## 如何使用\n1. **电视端**：设置 → 设备偏好 → 关于 → 连按 **Build** 7 次 → 开发者选项 → 打开 **USB 调试**（若有 Network / ADB debugging 也打开），保持电视开机\n2. **电脑端**（与电视同一 Wi-Fi）：\n```bash\ngit clone https://github.com/Gathin23/cleanyourtv\ncd cleanyourtv\n```\n把仓库目录交给 Claude Code / Codex / Gemini CLI，粘贴 `PROMPT.md` 并填入电视型号，按提示回答清单（用哪些 App、dock 放几个、是否保留语音助手 / Chromecast / 系统更新）\n3. **电视上确认**：「允许 USB 调试？」，之后 agent 会备份、禁用、编译安装 launcher，并用截图逐步验收\n\n**还原**：仓库带还原脚本（安装时生成了记录），按 `tools/` 里的 restore 流程逐项恢复；因为全程用 `disable-user` 而非卸载，理论上可逆。\n\n## 对我的价值\n**双重价值，且第二层比第一层重要。**\n\n第一层是实用：家里 Android TV / Google TV 的广告和预装确实烦，这套「备份 → 禁用不卸载 → 换桌面」的路径风险低、可回滚，比 root 或刷机务实得多。\n\n第二层是**这是我见过最干净的「把人类操作手册交给 Agent」的样本**：\n- `PROMPT.md` 不是自然语言教程，而是**给 agent 的任务书**，明确复用仓库内的脚本，避免 agent 即兴写命令\n- 每步有**截图验收**和**可回滚记录**，把「agent 操作实体设备」的风险控制住了\n- 机型知识以 `examples/*/tv.json` 沉淀，README 由脚本生成——**社区贡献的是数据，不是文档**\n它和同期的 `aerial-tv` 指向同一个趋势：**软件开始按「Agent 是执行者、人是审批者」来设计**。做 Agent 工具、写 skill 或自动化 SOP 时，这套结构（任务书 + 固定脚本 + 验收证据 + 数据化知识）可以直接抄。\n\n**必须注意**：\n- 项目**只有 9 天**、3.5 万星、239 个 open issue，脚本仍在快速演进，别把它当稳定产品\n- 在实体电视上跑 `pm disable-user` 前，先读 `tools/disable.sh` 和 `PROMPT.md`，确认没有禁用你要用的组件（尤其国产电视的语音、投屏、系统更新）\n- 中国区电视的系统组件命名与海外差异大，务必对照 `examples/` 里同品牌机型，不要照搬海外清单\n- ADB 调试等于局域网内开放调试入口，用完后建议关掉\n\n## 实践心得（待实践）\n>",
+      "file": "repos/mobile/cleanyourtv.md"
+    },
+    {
+      "name": "TVAPP",
+      "repo_url": "https://github.com/youhunwl/TVAPP",
+      "article_url": [
+        "https://app.iyouhun.com"
+      ],
+      "category": "mobile",
+      "tags": [
+        "AndroidTV",
+        "电视盒子",
+        "APK",
+        "TVBox",
+        "IPTV",
+        "直播源",
+        "影视",
+        "资源整理"
+      ],
+      "language": "JavaScript",
+      "stars": 25786,
+      "status": "收藏",
+      "date_added": "2026-10-22",
+      "sections": {
+        "__lead__": "",
+        "一句话": "**Android TV / 电视盒子应用合集**：把全网影视、直播、K歌、游戏、教育、工具类 APK 整理成一张 README 总表（版本号 + 直链 + 可用状态 + 备注），同时汇总 **TVBox 接口源**与 **IPTV 直播源**，配套网站 app.iyouhun.com。仓库仍在高频更新（2026-10 仍在提交）。",
+        "内容与亮点": "- **README 即数据库**：近百个 App 一览表，每行含**版本号、APK 直链、🟢/🔴 状态灯、适配与使用备注**（如「兼容安卓 4.4」「需配置接口源」「已停止转播」）\n- **七大分类目录**：影视（`影视/`）、电视直播（`电视直播/`）、K歌（`K歌/`）、娱乐应用、教育学习、运动健身、实用工具\n- **两类资源分开放**：**应用 APK** 直接托管在仓库里（无 Releases、无 CI，靠人工维护），**接口源 / 直播源**以纯文本清单给出\n- **空壳 vs 内置源**：区分得很清楚——TVBox / 影视仓 / FongMi影视 / OK影视 等是**空壳**，装完必须填接口源；月光宝盒、小苹果、欧歌等是**内置源**，安装即用\n- **接口源层级**：README 专门解释了**单线路 / 多线路 / 多仓**的概念，并给出一批单仓、多仓 JSON 地址\n- **直播源矩阵**：按 **纯 IPv4 / 纯 IPv6 / 混合 / 海外** 分组，含 M3U、TXT、EPG 节目单\n- **维护活跃**：pushed_at 显示仍在持续更新；部分应用明确标注失效（🔴），说明有人在跟进可用性",
+        "如何使用": "**在线浏览**：https://app.iyouhun.com （分类索引、兼容性标注）\n\n**装到电视 / 盒子**：\n1. 电视或盒子开启「允许安装未知来源应用」\n2. 在 README 一览表里点对应 APK 下载（或在电视浏览器里直接打开仓库页面）\n3. 用 U 盘拷贝安装，或先用**野草助手 / 欢视助手**把 APK 推送到电视再安装\n\n**空壳类配置**（TVBox / 影视仓 / FongMi / OK影视）：\n- 打开软件 → 设置 → 配置地址，粘贴 README「接口源」里的**单仓或多仓 JSON**\n- 直播源则填入 `M3U/TXT` 地址（纯 IPv6 源需要宽带支持 IPv6）\n\n**本地克隆**（仓库内有大量 APK，体积不小）：\n```bash\ngit clone https://github.com/youhunwl/TVAPP\n```\n注意：README 提示部分 GitHub 托管的源地址在国内需要自行加代理。",
+        "对我的价值": "**作为工具直接可用，作为代码没有学习价值**——仓库里没有应用源码，本质是一个精选资源目录 + APK 存储。\n\n真正值得看的是它的**索引型仓库运营方式**：不建站、不做数据库，用一张 README 表格承载「版本 / 直链 / 状态 / 备注」四类信息，配合分类目录和状态灯，2.5 万 star 全靠人工维护的可用性口碑。如果我要做一个「资源导航」类项目，这种**低技术成本、高信息密度**的结构比写爬虫更务实。它与本库的 `free-programming-books` 属于同一类：**内容组织本身就是产品**。\n\n**必须说清的风险**（比技术价值重要）：\n- **版权与合规**：影视、直播源绝大多数是未授权转播，README 自己也写「严禁商用，如有侵权请联系删除」；在国内属于明确的灰色地带\n- **APK 不可信**：大量安装包是第三方修改版，标注「解锁 VIP / 去广告 / 免登录」，来源无法验证，存在植入与隐私风险；只适合隔离的旧电视盒子，**不要装在存有账号或工作资料的设备上**\n- **稳定性**：接口源和直播源寿命通常只有几周到几个月，失效是常态，需要持续换源\n\n个人家庭影音折腾可参考；**任何工作、投研、私募相关设备都不建议安装**。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n**Android TV / 电视盒子应用合集**：把全网影视、直播、K歌、游戏、教育、工具类 APK 整理成一张 README 总表（版本号 + 直链 + 可用状态 + 备注），同时汇总 **TVBox 接口源**与 **IPTV 直播源**，配套网站 app.iyouhun.com。仓库仍在高频更新（2026-10 仍在提交）。\n\n## 内容与亮点\n- **README 即数据库**：近百个 App 一览表，每行含**版本号、APK 直链、🟢/🔴 状态灯、适配与使用备注**（如「兼容安卓 4.4」「需配置接口源」「已停止转播」）\n- **七大分类目录**：影视（`影视/`）、电视直播（`电视直播/`）、K歌（`K歌/`）、娱乐应用、教育学习、运动健身、实用工具\n- **两类资源分开放**：**应用 APK** 直接托管在仓库里（无 Releases、无 CI，靠人工维护），**接口源 / 直播源**以纯文本清单给出\n- **空壳 vs 内置源**：区分得很清楚——TVBox / 影视仓 / FongMi影视 / OK影视 等是**空壳**，装完必须填接口源；月光宝盒、小苹果、欧歌等是**内置源**，安装即用\n- **接口源层级**：README 专门解释了**单线路 / 多线路 / 多仓**的概念，并给出一批单仓、多仓 JSON 地址\n- **直播源矩阵**：按 **纯 IPv4 / 纯 IPv6 / 混合 / 海外** 分组，含 M3U、TXT、EPG 节目单\n- **维护活跃**：pushed_at 显示仍在持续更新；部分应用明确标注失效（🔴），说明有人在跟进可用性\n\n## 如何使用\n**在线浏览**：https://app.iyouhun.com （分类索引、兼容性标注）\n\n**装到电视 / 盒子**：\n1. 电视或盒子开启「允许安装未知来源应用」\n2. 在 README 一览表里点对应 APK 下载（或在电视浏览器里直接打开仓库页面）\n3. 用 U 盘拷贝安装，或先用**野草助手 / 欢视助手**把 APK 推送到电视再安装\n\n**空壳类配置**（TVBox / 影视仓 / FongMi / OK影视）：\n- 打开软件 → 设置 → 配置地址，粘贴 README「接口源」里的**单仓或多仓 JSON**\n- 直播源则填入 `M3U/TXT` 地址（纯 IPv6 源需要宽带支持 IPv6）\n\n**本地克隆**（仓库内有大量 APK，体积不小）：\n```bash\ngit clone https://github.com/youhunwl/TVAPP\n```\n注意：README 提示部分 GitHub 托管的源地址在国内需要自行加代理。\n\n## 对我的价值\n**作为工具直接可用，作为代码没有学习价值**——仓库里没有应用源码，本质是一个精选资源目录 + APK 存储。\n\n真正值得看的是它的**索引型仓库运营方式**：不建站、不做数据库，用一张 README 表格承载「版本 / 直链 / 状态 / 备注」四类信息，配合分类目录和状态灯，2.5 万 star 全靠人工维护的可用性口碑。如果我要做一个「资源导航」类项目，这种**低技术成本、高信息密度**的结构比写爬虫更务实。它与本库的 `free-programming-books` 属于同一类：**内容组织本身就是产品**。\n\n**必须说清的风险**（比技术价值重要）：\n- **版权与合规**：影视、直播源绝大多数是未授权转播，README 自己也写「严禁商用，如有侵权请联系删除」；在国内属于明确的灰色地带\n- **APK 不可信**：大量安装包是第三方修改版，标注「解锁 VIP / 去广告 / 免登录」，来源无法验证，存在植入与隐私风险；只适合隔离的旧电视盒子，**不要装在存有账号或工作资料的设备上**\n- **稳定性**：接口源和直播源寿命通常只有几周到几个月，失效是常态，需要持续换源\n\n个人家庭影音折腾可参考；**任何工作、投研、私募相关设备都不建议安装**。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/mobile/TVAPP.md"
+    },
+    {
       "name": "AI-For-Beginners",
       "repo_url": "https://github.com/microsoft/AI-For-Beginners",
       "article_url": [
@@ -602,6 +736,38 @@
       },
       "body": "## 一句话\n微软官方出品的 **「AI 入门」免费课程**仓库：12 周、24 课，覆盖神经网络、计算机视觉、NLP、生成式 AI，每课配实操代码、测验和实验，零基础可学。\n\n## 内容与亮点\n- **课程结构**：12 周 24 课，每课含理论 + 动手代码 + 测验 + 实验（lab），用 **TensorFlow / PyTorch** 双框架演示\n- **覆盖面**：符号 AI（GOFAI 知识表示与推理）、神经网络与深度学习、图像/文本神经架构（**CNN / RNN / Transformer**）、生成式 AI（**GAN**）、遗传算法、多智能体系统，以及 **AI 伦理**\n- **多语言**：50+ 语言翻译（含**简体中文**），GitHub Action 自动同步维护\n- **配套**：新手友好的 sketchnote 视觉笔记 + 课程思维导图；微软 for-beginners 系列课程之一（同系列还有 ML / Data Science / Generative AI）\n\n## 如何使用\n```bash\n# 仓库含 50+ 翻译文件体积大，用稀疏检出快速克隆（跳过翻译，保留全部课程）\ngit clone --filter=blob:none --sparse https://github.com/microsoft/AI-For-Beginners.git\ncd AI-For-Beginners\ngit sparse-checkout set --no-cone '/*' '!translations' '!translated_images'\n```\n- 按周/课顺序学习；需要完整中文版可单独拉取 `translations/zh-cn` 目录\n- 在线版文档：https://microsoft.github.io/AI-For-Beginners/\n\n## 对我的价值\n系统补 AI 基础知识的免费路线图；学完能对 LLM / RAG / CNN 建立整体认知，反过来理解正在用的 DeepSeek、Agent 框架的原理；每课小实验可直接在 Jupyter 里跑起来实践。\n\n## 实践心得（待实践）\n>",
       "file": "repos/learning/AI-For-Beginners.md"
+    },
+    {
+      "name": "ebook-treasure-chest",
+      "repo_url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+      "article_url": [
+        "https://jbiaojerry.github.io/ebook-treasure-chest/"
+      ],
+      "category": "learning",
+      "tags": [
+        "电子书",
+        "资源大全",
+        "epub",
+        "mobi",
+        "azw3",
+        "网盘下载",
+        "静态搜索页",
+        "Python"
+      ],
+      "language": "Python",
+      "stars": 21490,
+      "status": "收藏",
+      "date_added": "2026-10-22",
+      "sections": {
+        "__lead__": "",
+        "一句话": "一个**电子书下载链接宝库**：把帆书（原樊登读书）、微信读书、京东读书、喜马拉雅等平台的热门书整理成 1000 个标签、约 **2.4 万本**的索引，每本提供 **epub / mobi / azw3** 三种格式下载，并配套一个纯静态的在线实时搜索页。",
+        "内容与亮点": "- **规模**：`docs/parse-stats.json` 实测 **24,071 本书 / 1,000 个分类文件**，解析成功率 100%\n- **组织方式**：`md/<标签>.md` 每个文件是一个分类，表格三列「书名 | 作者 | epub/mobi/azw3」；README 顶部列出热门分类直达链接，用 `Ctrl+F` 或点标签进入\n- **分类覆盖**：文学（2711）、历史（1748）、科普（743）、管理（613）、社会（558）最大；与投研相关的 **投资（365）、金融（370）、经济（487）、股票（115）、量化（8）、私募（4）、巴菲特（15）** 都有独立标签\n- **在线搜索页**：`docs/index.html` + 7MB 的 `all-books.json`，纯静态、**实时搜索 + 多关键词（空格分隔）**，可直接部署到任何静态托管\n- **数据管线**：`scripts/` 下 Python 负责增量同步书目、解析详情、生成 JSON 与 HTML、自动更新 README 热门分类——仓库本身就是一个「**用脚本维护大型 Markdown 索引**」的完整范例\n- **下载链路**：链接指向城通网盘（ctfile），同一分类共用提取码，URL 里已带 `?p=8866`\n- **版权声明**：README 与分类页顶部均写明「仅供宽带测试研究，下载后 24 小时内删除，请支持正版」",
+        "如何使用": "**在线找书（推荐）**：打开 GitHub Pages 搜索页，输入书名 / 作者 / 分类，支持空格分隔多关键词。\n\n```\nhttps://jbiaojerry.github.io/ebook-treasure-chest/\n```\n\n**仓库内找书**：README 点分类 → 进入 `md/<分类>.md` → 浏览器 `Ctrl+F`，点「下载」进入网盘。\n\n**本地重建搜索数据**（改了自己的 md 之后）：\n```bash\ngit clone https://github.com/jbiaojerry/ebook-treasure-chest\ncd ebook-treasure-chest\npython3 scripts/parse_md_to_json.py   # md/ → docs/all-books.json + parse-stats.json\npython3 scripts/generate_index.py     # → docs/index.html + docs/books.json\n```\n依赖：仅 Python 3 标准库（`json` / `re` / `pathlib`），无第三方包；搜索页是原生 HTML/JS，无需构建。",
+        "对我的价值": "**找书直接用，别研究代码**——它的价值是「书源索引 + 静态搜索」这套组合，投研写材料时查投资 / 金融 / 经济类书籍、找经典原著的电子版比较省事。\n\n值得借鉴的是它的**内容工程做法**：2000 多万字的索引全靠 Python 脚本从书目源头增量同步、再生成 JSON 和静态搜索页，成本极低却没牺牲检索体验。如果我要维护任何「大清单型知识库」（论文、数据集、工具目录），这套 `md 分类文件 → JSON → 静态搜索页` 的管线可以直接照搬。\n\n**注意事项**：下载依赖第三方网盘与提取码，链接会失效；书籍版权归原作者，属于明显的灰色资源站，个人查阅即可，不要用于再分发或商用。",
+        "实践心得（待实践）": ">"
+      },
+      "body": "## 一句话\n一个**电子书下载链接宝库**：把帆书（原樊登读书）、微信读书、京东读书、喜马拉雅等平台的热门书整理成 1000 个标签、约 **2.4 万本**的索引，每本提供 **epub / mobi / azw3** 三种格式下载，并配套一个纯静态的在线实时搜索页。\n\n## 内容与亮点\n- **规模**：`docs/parse-stats.json` 实测 **24,071 本书 / 1,000 个分类文件**，解析成功率 100%\n- **组织方式**：`md/<标签>.md` 每个文件是一个分类，表格三列「书名 | 作者 | epub/mobi/azw3」；README 顶部列出热门分类直达链接，用 `Ctrl+F` 或点标签进入\n- **分类覆盖**：文学（2711）、历史（1748）、科普（743）、管理（613）、社会（558）最大；与投研相关的 **投资（365）、金融（370）、经济（487）、股票（115）、量化（8）、私募（4）、巴菲特（15）** 都有独立标签\n- **在线搜索页**：`docs/index.html` + 7MB 的 `all-books.json`，纯静态、**实时搜索 + 多关键词（空格分隔）**，可直接部署到任何静态托管\n- **数据管线**：`scripts/` 下 Python 负责增量同步书目、解析详情、生成 JSON 与 HTML、自动更新 README 热门分类——仓库本身就是一个「**用脚本维护大型 Markdown 索引**」的完整范例\n- **下载链路**：链接指向城通网盘（ctfile），同一分类共用提取码，URL 里已带 `?p=8866`\n- **版权声明**：README 与分类页顶部均写明「仅供宽带测试研究，下载后 24 小时内删除，请支持正版」\n\n## 如何使用\n**在线找书（推荐）**：打开 GitHub Pages 搜索页，输入书名 / 作者 / 分类，支持空格分隔多关键词。\n\n```\nhttps://jbiaojerry.github.io/ebook-treasure-chest/\n```\n\n**仓库内找书**：README 点分类 → 进入 `md/<分类>.md` → 浏览器 `Ctrl+F`，点「下载」进入网盘。\n\n**本地重建搜索数据**（改了自己的 md 之后）：\n```bash\ngit clone https://github.com/jbiaojerry/ebook-treasure-chest\ncd ebook-treasure-chest\npython3 scripts/parse_md_to_json.py   # md/ → docs/all-books.json + parse-stats.json\npython3 scripts/generate_index.py     # → docs/index.html + docs/books.json\n```\n依赖：仅 Python 3 标准库（`json` / `re` / `pathlib`），无第三方包；搜索页是原生 HTML/JS，无需构建。\n\n## 对我的价值\n**找书直接用，别研究代码**——它的价值是「书源索引 + 静态搜索」这套组合，投研写材料时查投资 / 金融 / 经济类书籍、找经典原著的电子版比较省事。\n\n值得借鉴的是它的**内容工程做法**：2000 多万字的索引全靠 Python 脚本从书目源头增量同步、再生成 JSON 和静态搜索页，成本极低却没牺牲检索体验。如果我要维护任何「大清单型知识库」（论文、数据集、工具目录），这套 `md 分类文件 → JSON → 静态搜索页` 的管线可以直接照搬。\n\n**注意事项**：下载依赖第三方网盘与提取码，链接会失效；书籍版权归原作者，属于明显的灰色资源站，个人查阅即可，不要用于再分发或商用。\n\n## 实践心得（待实践）\n>",
+      "file": "repos/learning/ebook-treasure-chest.md"
     },
     {
       "name": "free-programming-books",
