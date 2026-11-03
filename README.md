@@ -24,6 +24,37 @@ cd web && npm run dev        # 浏览器打开 http://localhost:5174
 bash scripts/rebuild-all.sh
 ```
 
+## 数据接口（JSON）
+
+网页端除了给人看，也把全部条目发布成一份独立 JSON，方便脚本、其他 Agent 或外部工具直接消费：
+
+```
+https://xifengxx.github.io/code-library/data/repos.json     # 线上
+http://localhost:5174/data/repos.json                       # 本地 dev
+```
+
+结构为 `{ source, entries: [...] }`，`entries` 每条对应 `repos/<category>/<name>.md` 一个条目：
+
+| 字段 | 说明 |
+|---|---|
+| `name` / `repo_url` / `article_url` / `category` / `tags` / `language` / `stars` / `status` / `date_added` | frontmatter 原样字段 |
+| `file` | 源文件相对路径，如 `repos/ai-llm/adhd.md` |
+| `body` | 正文 Markdown 原文，可直接渲染 |
+| `sections` | 已解析的分节对象（`一句话` / `内容与亮点` / `如何使用` / `对我的价值` / `实践心得（待实践）`） |
+
+```bash
+# 例：按分类统计
+curl -s https://xifengxx.github.io/code-library/data/repos.json \
+  | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{
+      const t={};for(const e of JSON.parse(d).entries)t[e.category]=(t[e.category]||0)+1;
+      console.log(t)})'
+```
+
+该文件由 `web/vite.config.js` 的 `expose-repos-json` 插件在构建时从 `web/src/data/repos.json` **原样输出**，
+dev 下按请求实时读取，不存在需要手动同步的副本；源头仍是 `repos/` 的 Markdown。
+**限制**：GitHub Pages 无法自定义响应头，所以从**其它域名的浏览器页面**里 `fetch` 会被 CORS 拦；
+`curl` / Node / Python / 服务端脚本读不受影响。
+
 ## 分类（一级固定枚举，标签自由）
 
 `ai-llm` AI/LLM · `frontend` 前端 · `backend` 后端 · `database` 数据库/存储 · `devops` DevOps/云 · `tools` 开发工具/CLI · `mobile` 移动端 · `learning` 学习资源 · `templates` 项目模板/示例 · `misc` 其他
