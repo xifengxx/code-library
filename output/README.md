@@ -19,7 +19,7 @@
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
-| [adhd](https://github.com/UditAkhourii/adhd) | 给 coding agent 用的「发散思维」Skill——用 **Tree-of-Thought + pruning（ | TypeScript | 3.6k | Agent, 思维发散, Tree-of-Thought, Claude, 创意, TypeScript | 收藏 |
+| [adhd](https://github.com/UditAkhourii/adhd) | 给 coding agent 用的「发散思维」Skill——用 **Tree-of-Thought + 隔离发散 + 剪 | TypeScript | 4.5k | Agent, 思维发散, Tree-of-Thought, Claude, 创意, TypeScript, Codex | 收藏 |
 | [diagram-design](https://github.com/cathrynlavery/diagram-design) | Diagram Design 是一个适配 Claude Code、Codex、GitHub Copilot、Factor | HTML | 46.5k | Agent-skill, claude-code, codex, copilot, 图表, 数据可视化, SVG, 品牌风格, Mermaid, draw.io, Excalidraw | 收藏 |
 | [handraw-style](https://github.com/yang0/handraw-style) | 手绘风格提示词库 / Agent Skill：收录 **001–267 号手绘画风**并配编号画廊，用户只需报「编号 + | HTML | 2.1k | Agent-skill, codex, 提示词, AI绘画, 手绘风格, 风格参考图, 双语提示词 | 收藏 |
 | [langchain](https://github.com/langchain-ai/langchain) | 构建 LLM 应用（**Agent** / **RAG** / 链式编排）最流行的 Python 框架，把模型调用、提示 | Python | 105k | LLM, Agent, RAG, 框架, Python | 收藏 |
