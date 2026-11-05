@@ -1,6 +1,6 @@
 # 📚 代码仓库总索引
 
-> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **28** 个仓库。
+> 自动生成自 `repos/`（运行 `node scripts/build-index.mjs` 重新生成）。共 **29** 个仓库。
 
 | 分类 | 数量 |
 |---|---|
@@ -9,7 +9,7 @@
 | 后端 | 0 |
 | 数据库 / 存储 | 1 |
 | DevOps / 云 | 1 |
-| 开发工具 / CLI | 5 |
+| 开发工具 / CLI | 6 |
 | 移动端 | 3 |
 | 学习资源 | 3 |
 | 项目模板 / 示例 | 2 |
@@ -50,12 +50,13 @@
 |---|---|---|---|---|---|
 | [pinme](https://github.com/glitternetwork/pinme) | 「一句话把开发的网站发布到线上」——把本地静态网页、图片或任意文件,快速变成一个谁都能访问的公网链接的部署工具。 | TypeScript | 3.7k | 部署, 静态网站, serverless, Claude-skill, IPFS | 收藏 |
 
-## 开发工具 / CLI（5）
+## 开发工具 / CLI（6）
 
 | 仓库 | 一句话 | 语言 | Stars | 标签 | 状态 |
 |---|---|---|---|---|---|
 | [aholo-viewer](https://github.com/manycoretech/aholo-viewer) | 国产高性能浏览器端 **3D 高斯泼溅（3D Gaussian Splatting）** 渲染引擎——在网页里直接渲染  | TypeScript | 1k | 3D, 3DGS, 渲染, WebGL, TypeScript | 收藏 |
 | [book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 把任意技术书 PDF、文档文件夹或资料合集，**提炼成一个结构化 Claude Code Skill**——框架、决策规 | Python | 16.7k | agent-skill, claude-code, pdf, skill-creator, 知识管理 | 收藏 |
+| [cicada](https://github.com/wquguru/cicada) | 「知了」是一款跨平台（Mac / Windows / Linux / Android）免费开源的实时字幕、同声传译与 A | Swift | 1.4k | 实时字幕, 同声传译, 会议纪要, 语音识别, 翻译, macOS, SwiftUI, 开源 | 收藏 |
 | [html-anything](https://github.com/nexu-io/html-anything) | 「AI 代理时代的 HTML 编辑器」——你的本地 AI Agent 写 HTML,你负责发布。核心理念是「Markdo | HTML | 8.3k | HTML, AI编辑器, agent-skill, vibe-coding, nextjs | 收藏 |
 | [Recordly](https://github.com/webadderallorg/Recordly) | 开源桌面录屏 + 编辑工具——录完之后自动帮你把画面处理好看,无需剪辑技能即可产出精致 demo 视频。 | TypeScript | 21.4k | 录屏, 视频编辑, Electron, 跨平台, 演示视频 | 收藏 |
 | [tax-check](https://github.com/tomczhang/tax-check) | 面向**中国大陆居民**的海外资本利得税计算工具——把海外券商文件整理成个人申报参考底稿,「可以不报,不能不知道」。 | TypeScript | 53 | 税务, 资本利得税, 海外投资, 报税, 工具 | 收藏 |
